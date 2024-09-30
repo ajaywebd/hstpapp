@@ -1,0 +1,134 @@
+/* Main container */
+.exercise-container {
+  background-color: #ffffff; /* Clean white background */
+  color: #333333; /* Darker text for readability */
+  padding: 30px;
+  max-width: 900px;
+  margin: 20px auto;
+  border-radius: 12px; /* Slightly rounded corners for a modern look */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  font-family: "Arial", sans-serif; /* Clean font for readability */
+}
+
+/* Title styling */
+.exercise-title {
+  color: #007bff; /* Subtle blue for the main title */
+  text-align: center;
+  margin-bottom: 25px;
+  font-weight: bold;
+  font-size: 2.4rem; /* Larger for more emphasis */
+  letter-spacing: 1px; /* Slight spacing for clarity */
+}
+
+/* Description styling */
+.exercise-description {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 25px;
+  text-align: justify;
+  color: #555555; /* A lighter shade for less important text */
+}
+
+/* Section titles */
+.section-title {
+  color: #28a745; /* Green to distinguish section titles */
+  font-weight: bold;
+  margin-top: 35px;
+  margin-bottom: 20px;
+  font-size: 1.6rem;
+  border-bottom: 2px solid #28a745; /* Underline for emphasis */
+  padding-bottom: 10px; /* Space between title and content */
+}
+
+/* Subheadings and their content */
+.subheading-item h4 {
+  font-size: 1.4rem;
+  color: #333333;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.subheading-item p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #555555; /* Lighter text for subheading content */
+}
+
+/* Button Styling */
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  border-radius: 6px; /* Slight rounding for a modern look */
+  display: inline-block;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px); /* Small lift on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .exercise-container {
+    padding: 20px;
+  }
+
+  .exercise-title {
+    font-size: 2rem;
+  }
+
+  .exercise-description {
+    font-size: 1rem;
+  }
+
+  .section-title {
+    font-size: 1.4rem;
+  }
+
+  .subheading-item h4 {
+    font-size: 1.3rem;
+  }
+
+  .subheading-item p {
+    font-size: 1rem;
+  }
+
+  .btn-primary {
+    font-size: 1.1rem;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .exercise-title {
+    font-size: 1.8rem;
+  }
+
+  .exercise-description {
+    font-size: 0.9rem;
+  }
+
+  .section-title {
+    font-size: 1.3rem;
+  }
+
+  .subheading-item h4 {
+    font-size: 1.2rem;
+  }
+
+  .subheading-item p {
+    font-size: 0.9rem;
+  }
+
+  .btn-primary {
+    font-size: 1rem;
+  }
+}

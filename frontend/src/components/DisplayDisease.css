@@ -1,0 +1,160 @@
+/* Main container */
+.disease-container {
+  background: #ffffff; /* White background for a clean and minimal look */
+  color: #333333; /* Dark text color for readability */
+  padding: 20px;
+  max-width: 900px;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  font-family: "Arial", sans-serif; /* Clean, modern font */
+}
+
+/* Title styling */
+.disease-title {
+  color: #007bff; /* Bright blue for title */
+  text-align: center; /* Center the title */
+  font-size: 2.5rem; /* Large title */
+  margin-bottom: 20px;
+  font-weight: 700;
+  border-bottom: 2px solid #f1f1f1;
+  padding-bottom: 10px;
+}
+
+/* Description styling */
+.disease-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555555; /* Slightly lighter text for description */
+  margin-bottom: 30px;
+}
+
+/* Section titles (Remedies, Preventive Measures, Notes) */
+.section-title {
+  color: #28a745; /* Green for section titles */
+  font-size: 1.8rem;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  border-bottom: 2px solid #f1f1f1;
+  padding-bottom: 10px;
+}
+
+/* Individual remedy item styling */
+.remedy-item {
+  background: #f9f9f9; /* Soft gray background for each remedy item */
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border-left: 5px solid #007bff; /* Blue border to highlight each item */
+}
+
+/* Remedy and Precaution name */
+.remedy-name {
+  font-weight: 600;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+/* Remedy and Precaution text styling */
+.remedy-item p {
+  margin: 5px 0; /* Space between paragraphs */
+  font-size: 1rem;
+  color: #444444;
+  text-align: start;
+}
+
+.remedy-item strong {
+  font-weight: 700; /* Bold for "Remedy" and "Precaution" */
+  width: 100px;
+  /* display: inline-block;  */
+}
+
+/* Preventive measures list styling */
+.preventive-list {
+  padding-left: 20px;
+  list-style: disc;
+  color: #444444;
+}
+
+.preventive-list li {
+  margin-bottom: 10px;
+}
+
+/* Note item styling */
+.note-item {
+  background: #f1f1f1;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.note-item ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.note-item h6 {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* Back Button Styling */
+.btn-success {
+  background-color: #28a745; /* Green color for back button */
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.btn-success:hover {
+  background-color: #218838; /* Darken on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .disease-container {
+    padding: 15px;
+  }
+
+  .disease-title {
+    font-size: 2rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .remedy-name {
+    font-size: 1.2rem;
+  }
+
+  .btn-success {
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .disease-title {
+    font-size: 1.8rem;
+  }
+
+  .section-title {
+    font-size: 1.4rem;
+  }
+
+  .remedy-name {
+    font-size: 1.1rem;
+  }
+
+  .btn-success {
+    font-size: 0.9rem;
+    padding: 7px 14px;
+  }
+}

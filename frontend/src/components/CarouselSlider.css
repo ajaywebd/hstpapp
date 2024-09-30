@@ -1,0 +1,134 @@
+/* Add 360-degree rotation animation */
+@keyframes rotate360 {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.txtContainer {
+  position: relative;
+}
+
+.txtStyle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: rotate360 3s forwards; /* Rotate 360 degrees once and stop */
+}
+
+.txtStyle h1,
+.txtStyle p {
+  text-align: center;
+  color: #ffffff; /* White for high contrast */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Shadow to enhance readability */
+}
+
+/* Responsive font sizes */
+.txtStyle h1 {
+  font-weight: 700;
+  font-size: 4vw; /* Scale based on viewport width */
+}
+
+.txtStyle p {
+  font-weight: 600;
+  font-size: 2.5vw; /* Scale based on viewport width */
+}
+
+/* Extra small devices (phones, less than 576px) */
+@media (max-width: 576px) {
+  .txtStyle h1 {
+    font-size: 6vw; /* Larger for smaller screens */
+  }
+
+  .txtStyle p {
+    font-size: 4vw;
+  }
+
+  .carousel-container {
+    height: 35vh; /* Reduced height for small screens */
+    overflow: hidden;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .txtStyle h1 {
+    font-size: 5vw;
+  }
+
+  .txtStyle p {
+    font-size: 3.5vw;
+  }
+
+  .carousel-container {
+    height: 40vh;
+    overflow: hidden;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .txtStyle h1 {
+    font-size: 4.5vw;
+  }
+
+  .txtStyle p {
+    font-size: 3vw;
+  }
+
+  .carousel-container {
+    height: 50vh;
+    overflow: hidden;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .txtStyle h1 {
+    font-size: 4vw;
+  }
+
+  .txtStyle p {
+    font-size: 2.5vw;
+  }
+
+  .carousel-container {
+    height: 60vh;
+    overflow: hidden;
+  }
+}
+
+/* Extra large devices (1200px and up) */
+@media (min-width: 1200px) {
+  .txtStyle h1 {
+    font-size: 3.5vw;
+  }
+
+  .txtStyle p {
+    font-size: 2vw;
+  }
+
+  .carousel-container {
+    height: 75vh;
+    overflow: hidden;
+  }
+}
+
+/* XXL devices (1400px and up) */
+@media (min-width: 1400px) {
+  .carousel-container {
+    height: 80vh;
+    overflow: hidden;
+  }
+}
+
+.carousel-item img {
+  object-fit: cover; /* Ensure full image is visible within the container */
+  object-position: center;
+  height: 100%;
+  opacity: 0.9;
+}

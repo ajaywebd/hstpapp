@@ -1,0 +1,140 @@
+/* faq.css */
+.faq {
+  background-color: #f4f4f4; /* Light neutral background */
+  padding: 40px 0;
+}
+
+.faq h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #343a40; /* Dark grey for a professional look */
+}
+
+.faq p {
+  color: #6c757d; /* Muted grey text */
+  font-size: 1.1rem; /* Slightly larger text */
+}
+
+/* Accordion Button */
+.accordion-button {
+  background-color: #495057; /* Dark grey button background */
+  color: #fff; /* White text for contrast */
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #343a40; /* Darker grey when expanded */
+  color: #f8f9fa; /* Change text color when expanded to white */
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+}
+
+.accordion-button:hover {
+  background-color: #212529; /* Darker grey on hover */
+}
+
+/* Accordion Body */
+.accordion-body {
+  background-color: #ffffff; /* White background for the content */
+  border: 1px solid #dee2e6; /* Light grey border */
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #495057; /* Dark grey text */
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.accordion-body.collapsing,
+.accordion-body.show {
+  color: #343a40; /* Ensure dark text for visibility when expanded */
+}
+
+/* Accordion Item */
+.accordion-item {
+  border: none; /* Remove border between accordion items */
+  margin-bottom: 15px; /* Space between items */
+}
+
+/* Accordion Arrow Color */
+.accordion-button::after {
+  color: #6c757d; /* Muted grey for the accordion arrow */
+}
+
+/* Improved Visibility for Opened Accordion */
+.accordion-item .accordion-button:not(.collapsed) {
+  color: #ffffff; /* Change text color to white when expanded */
+}
+
+.accordion-item .accordion-body.show {
+  color: #343a40; /* Dark grey text inside the open accordion body */
+}
+
+/* Media Queries for Responsive Design */
+
+/* Small devices (phones) */
+@media (max-width: 576px) {
+  .faq h2 {
+    font-size: 1.75rem; /* Reduce heading size for mobile */
+  }
+
+  .faq p {
+    font-size: 1rem; /* Slightly smaller paragraph text */
+  }
+
+  .accordion-button {
+    font-size: 0.9rem; /* Smaller font for accordion buttons */
+    padding: 12px; /* Adjust padding for mobile */
+  }
+
+  .accordion-body {
+    font-size: 0.85rem; /* Smaller font for accordion body */
+    padding: 15px; /* Adjust padding for mobile */
+  }
+
+  .faq {
+    padding: 20px 0; /* Less padding on small devices */
+  }
+}
+
+/* Medium devices (tablets) */
+@media (min-width: 576px) and (max-width: 768px) {
+  .faq h2 {
+    font-size: 1.9rem; /* Slightly smaller heading for tablets */
+  }
+
+  .accordion-button {
+    font-size: 1rem; /* Adjust button font for tablets */
+    padding: 14px; /* Adjust padding for tablets */
+  }
+
+  .accordion-body {
+    font-size: 0.9rem; /* Adjust font size for tablets */
+    padding: 18px; /* Adjust padding for tablets */
+  }
+}
+
+/* Large devices (desktops) */
+@media (min-width: 1200px) {
+  .faq h2 {
+    font-size: 2.2rem; /* Larger heading for bigger screens */
+  }
+
+  .accordion-button {
+    font-size: 1.1rem; /* Slightly larger font for accordion buttons */
+    padding: 18px; /* Adjust padding for larger screens */
+  }
+
+  .accordion-body {
+    font-size: 1rem; /* Larger font size for the accordion body */
+    padding: 25px; /* More padding for larger screens */
+  }
+}
+.marb {
+  margin-bottom: -50px;
+}

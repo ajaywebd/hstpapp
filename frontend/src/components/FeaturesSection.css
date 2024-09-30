@@ -1,0 +1,63 @@
+.features-section {
+  padding: 2rem 1rem;
+  background-color: #f8f9fa; /* Light professional background color */
+}
+
+.feature-card {
+  background-color: #ffffff; /* Clean white card background */
+  padding: 1.5rem;
+  border-radius: 15px; /* Softer rounded corners */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05); /* Lighter shadow for a professional look */
+  width: 100%;
+  max-width: 320px; /* Slightly wider for uniformity */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.feature-card:hover {
+  transform: translateY(-10px); /* Adds hover elevation effect */
+}
+
+.icon-color {
+  color: #28a745; /* Updated to a professional green color */
+}
+
+/* Ensure the cards take full width on smaller screens */
+@media (max-width: 576px) {
+  .feature-card {
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .features-row {
+    justify-content: center;
+  }
+}
+
+/* Ensure consistent card sizing on tablets and larger screens */
+@media (min-width: 768px) {
+  .feature-card {
+    max-width: 320px;
+    margin-bottom: 1rem;
+  }
+
+  .features-row {
+    justify-content: center;
+  }
+}
+
+/* For larger screens, maintain uniform card size and alignment */
+@media (min-width: 992px) {
+  .feature-card {
+    max-width: 350px;
+    height: 100%;
+  }
+
+  .features-row {
+    justify-content: center;
+  }
+}

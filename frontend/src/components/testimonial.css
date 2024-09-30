@@ -1,0 +1,40 @@
+/* testimonial.css */
+.testimonials {
+  background-color: #f8f9fa;
+}
+
+.testimonials h2 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.text-muted {
+  text-align: center;
+}
+.testimonial-item {
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.testimonial-content {
+  font-size: 1rem;
+  color: #555;
+}
+
+.testimonial-author h5 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.testimonial-author p {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.slick-slide {
+  padding: 0 15px;
+}
+
+.slick-dots li button:before {
+  color: #007bff;
+}

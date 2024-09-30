@@ -1,0 +1,51 @@
+/* Stats Component Styles */
+
+/* Slider Item Style */
+.text-center1 {
+  background-color: #004d4d; /* Dark teal background for professional look */
+  color: #ffffff; /* White text */
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px; /* Ensure consistent height */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Icon Colors */
+.text-center i {
+  color: inherit; /* Icons inherit the section color */
+}
+
+.text-center p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+/* Slick slider arrow colors */
+.slick-prev:before,
+.slick-next:before {
+  color: #004d4d; /* Change arrow color to match teal theme */
+}
+
+/* Slick Slide Flexbox Alignment */
+.slick-slide > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+/* Dots customization */
+.slick-dots li button:before {
+  color: #004d4d; /* Change dots color to match teal theme */
+}
+
+.slick-dots li.slick-active button:before {
+  opacity: 0.75;
+  color: #004d4d; /* Change active dot color */
+}

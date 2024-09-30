@@ -1,0 +1,51 @@
+/* Style for the professional button look */
+.custom-button {
+  background-color: #007bff; /* Professional primary blue */
+  border: none;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.custom-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  color: white;
+  box-shadow: 0px 4px 6px rgba(0, 123, 255, 0.4); /* Subtle shadow on hover */
+}
+
+.custom-button:focus {
+  outline: none;
+  box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.7); /* Focus shadow */
+}
+
+/* Centering the button inside the card footer */
+.card-footer {
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card-footer .custom-button {
+  width: 100%; /* Full-width button */
+  display: block;
+  text-align: center; /* Ensure the button is centered */
+}
+
+.card-body {
+  padding-bottom: 20px;
+}
+
+/* Responsive carousel and card layout */
+@media (max-width: 768px) {
+  .news-carousel .carousel-item {
+    padding: 0 15px;
+  }
+
+  .card {
+    margin-bottom: 20px;
+  }
+}

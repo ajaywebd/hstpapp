@@ -1,0 +1,69 @@
+/* NavigationBar.css */
+
+/* Background color for the navbar */
+.navbar-light {
+  background-color: #ffffff; /* White background */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow at the bottom */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05); /* Subtle border for extra definition */
+}
+
+/* Brand logo */
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #007bff !important; /* Primary color for the brand */
+}
+
+/* Default link color */
+.navbar-light .navbar-nav .nav-link {
+  color: #333333; /* Dark grey for readability */
+  font-weight: 500;
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* Hover effect for links */
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #007bff; /* Primary blue color on hover */
+  background-color: transparent; /* No background color change */
+  text-decoration: none; /* Remove underline */
+}
+
+/* Active link color */
+.navbar-light .navbar-nav .nav-link.active {
+  color: #0056b3; /* Slightly darker blue */
+  font-weight: 700; /* Make the active link bolder */
+}
+
+/* Dropdown styles */
+.navbar-light .navbar-nav .dropdown-menu {
+  background-color: #ffffff; /* White background for dropdown */
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Slight shadow for dropdown */
+}
+
+.navbar-light .navbar-nav .dropdown-item {
+  color: #333333;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-light .navbar-nav .dropdown-item:hover {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+/* Custom margins between menu items */
+.nav-item {
+  margin-left: 1rem;
+}
+
+/* Responsiveness for small screens */
+@media (max-width: 992px) {
+  .nav-item {
+    margin-left: 0; /* Remove margin on smaller screens */
+  }
+
+  .navbar-collapse {
+    justify-content: center; /* Center items in the collapse */
+  }
+}

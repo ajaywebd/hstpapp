@@ -1,0 +1,165 @@
+/* Main container */
+.exercise-container {
+  background-color: #fff; /* White background */
+  color: #333; /* Darker text color for readability */
+  padding: 30px;
+  max-width: 900px;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Title styling */
+.exercise-title {
+  color: #007bff; /* Subtle blue for title */
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+/* Description styling */
+.exercise-description {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+/* Section titles */
+.section-title {
+  color: #28a745; /* Green for section titles */
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+/* Benefits section */
+.list-group {
+  list-style-type: disc; /* Simple bullets */
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.list-group-item {
+  font-size: 1rem;
+  line-height: 1.6;
+  background: transparent; /* Remove background */
+  padding: 5px 0;
+  margin-bottom: 10px; /* Spacing between each point */
+  border: none; /* No borders */
+}
+
+/* Types, Steps, Modifications styling */
+.type-item,
+.step-item,
+.modification-item {
+  margin-bottom: 20px;
+}
+.type-item p,
+.step-item p,
+.modification-item p {
+  text-align: start;
+}
+
+/* Subtitles within sections */
+.type-item h4,
+.step-item h4,
+.modification-item h4 {
+  font-weight: bold;
+  color: #333; /* Darker color instead of bright blue */
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+/* Button Styling */
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+/* Ensure strong tags in list items are bold */
+.list-group-item strong {
+  font-weight: bold;
+}
+
+/* Styling for list items */
+.list-group-item {
+  font-size: 1rem;
+  line-height: 1.6;
+  background: transparent; /* No background */
+  padding: 5px 0;
+  margin-bottom: 10px; /* Space between items */
+  border: none; /* No border */
+}
+
+/* Section titles, like "Tips:" */
+.section-title {
+  color: #28a745; /* Green for titles */
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+/* Ensure strong tags in list items are bold */
+.list-group-item strong {
+  font-weight: bold;
+}
+
+/* Styling for list items */
+.list-group-item {
+  font-size: 1rem;
+  line-height: 1.6;
+  background: transparent; /* No background */
+  padding: 5px 0;
+  margin-bottom: 10px; /* Space between items */
+  border: none; /* No border */
+}
+
+/* Section titles */
+.section-title {
+  color: #28a745; /* Green for titles */
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .exercise-container {
+    padding: 20px;
+  }
+
+  .exercise-title {
+    font-size: 1.8rem;
+  }
+
+  .exercise-description {
+    font-size: 1rem;
+  }
+
+  .section-title {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .exercise-title {
+    font-size: 1.5rem;
+  }
+
+  .exercise-description {
+    font-size: 0.9rem;
+  }
+
+  .section-title {
+    font-size: 1.2rem;
+  }
+}

@@ -1,0 +1,147 @@
+/* Main container */
+.exercise-container {
+  background-color: #fff; /* Clean white background for clarity */
+  color: #333; /* Darker text for readability */
+  padding: 30px;
+  max-width: 900px;
+  margin: 20px auto;
+  border-radius: 10px; /* Slightly rounded corners for a modern look */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  font-family: "Arial", sans-serif; /* Professional and readable font */
+}
+
+/* Title styling */
+.exercise-title {
+  color: #007bff; /* Blue for primary title */
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 2.4rem; /* Slightly larger title */
+  letter-spacing: 1px; /* Letter spacing for clarity */
+  text-transform: uppercase; /* Makes the title stand out */
+}
+
+/* Description styling */
+.exercise-description {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 25px;
+  text-align: justify;
+  color: #555; /* Slightly lighter color for secondary importance */
+}
+
+/* Section titles */
+.section-title {
+  color: #28a745; /* Green to indicate section titles */
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-size: 1.6rem;
+  border-bottom: 2px solid #28a745; /* Underline section titles */
+  padding-bottom: 10px;
+  text-transform: capitalize; /* Make it more elegant */
+}
+
+/* Subheadings styling */
+.subheading-item h4 {
+  font-size: 1.4rem;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: capitalize; /* Subheadings styled similarly for professionalism */
+}
+
+.subheading-item p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #555; /* Slightly lighter text for content */
+  text-align: justify;
+}
+
+/* Bullet lists styling */
+.list-group {
+  list-style-type: disc; /* Simple bullets */
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.list-group-item {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  background: transparent;
+  padding: 10px 0;
+  margin-bottom: 10px; /* More space between list items */
+  border: none;
+  color: #555;
+}
+
+/* Button styling */
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 6px; /* Rounded for modern appearance */
+  display: inline-block;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  .exercise-container {
+    padding: 20px;
+  }
+
+  .exercise-title {
+    font-size: 2rem;
+  }
+
+  .exercise-description {
+    font-size: 1.1rem;
+  }
+
+  .section-title {
+    font-size: 1.4rem;
+  }
+
+  .subheading-item h4 {
+    font-size: 1.3rem;
+  }
+
+  .btn-primary {
+    font-size: 1.1rem;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .exercise-title {
+    font-size: 1.8rem;
+  }
+
+  .exercise-description {
+    font-size: 1rem;
+  }
+
+  .section-title {
+    font-size: 1.2rem;
+  }
+
+  .subheading-item h4 {
+    font-size: 1.2rem;
+  }
+
+  .btn-primary {
+    font-size: 1rem;
+  }
+}

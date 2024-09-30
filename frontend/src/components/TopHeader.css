@@ -1,0 +1,61 @@
+.footer-container {
+  background-color: #0d4a7f; /* Background color */
+  padding: 20px 0;
+  color: #ffffff; /* Text color */
+}
+
+.footer-container .fa {
+  font-size: 1.2rem;
+  color: #ffffff; /* Icon color */
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth hover transition */
+}
+
+.footer-container .fa:hover {
+  color: #99d6ff; /* Lighter blue hover effect */
+  transform: translateY(-2px); /* Slight upward movement on hover */
+}
+
+.footer-container a {
+  color: #ffffff; /* Ensure links are white */
+  transition: color 0.3s ease;
+}
+
+.footer-container a:hover {
+  color: #99d6ff; /* Lighter blue hover effect for links */
+}
+
+.footer-container p {
+  margin: 0;
+  color: #ffffff; /* Text color */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .footer-container .row {
+    text-align: center;
+  }
+
+  .footer-container .col-md-4 {
+    margin-bottom: 15px;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer-container .justify-content-md-start {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-container .row {
+    text-align: center;
+  }
+
+  .footer-container .col-md-4 {
+    margin-bottom: 10px;
+  }
+
+  .footer-container i {
+    margin-right: 8px;
+  }
+}

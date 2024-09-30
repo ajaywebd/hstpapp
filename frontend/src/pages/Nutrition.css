@@ -1,0 +1,112 @@
+#nutrition-hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  background-color: #f9f9f9; /* Light background color */
+  position: relative;
+}
+
+h1 {
+  font-size: 36px;
+  text-align: center;
+}
+
+p {
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Flexbox layout for the form and selected data */
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Calculate BMI button at the top left */
+.calculate-bmi-button {
+  position: absolute;
+  top: 20px;
+  left: 5px;
+  z-index: 10; /* Ensure it stays above the content */
+}
+
+.calculate-bmi-button .btn-danger {
+  transition: transform 0.3s ease;
+  transform: translateX(-60%);
+}
+
+.calculate-bmi-button .btn-danger:hover {
+  transform: translateX(0); /* Move back to the original position on hover */
+}
+
+/* Right side: Selected data */
+.col-lg-5.col-md-6 {
+  border: none;
+}
+
+h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* Dropdown menu styling with scrollbars */
+.dropdown-menu {
+  max-height: 200px; /* Set max height for scroll */
+  overflow-y: auto; /* Enable vertical scrolling */
+  border: 1px solid #ddd; /* Optional: Add border for better visibility */
+}
+
+/* Button centering below the form and selected data */
+.row.justify-content-center {
+  margin-top: 50px;
+}
+
+.btn-success {
+  width: 100%;
+  padding: 15px;
+  font-size: 18px;
+}
+
+/* Responsive styling adjustments */
+@media (max-width: 768px) {
+  #nutrition-hero {
+    height: auto;
+    padding: 20px 0;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .col-lg-5,
+  .col-md-6 {
+    margin-bottom: 20px;
+  }
+
+  .btn-success {
+    padding: 10px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .btn-success {
+    padding: 8px;
+    font-size: 14px;
+  }
+}

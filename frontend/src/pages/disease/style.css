@@ -1,0 +1,59 @@
+.custom-link {
+  color: #1e1e2f; /* Dark color for the text */
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  transition: color 0.3s ease-in-out;
+}
+
+.custom-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #007bff; /* Link underline color */
+  transition: width 0.3s ease-in-out;
+}
+
+.custom-link:hover {
+  color: #007bff; /* Change text color on hover */
+}
+
+.custom-link:hover::after {
+  width: 100%;
+}
+
+/* Container for the list with a single scrollbar */
+.disease-list-container {
+  height: 300px; /* Adjust to desired height */
+  overflow-y: auto;
+}
+
+.custom-scroll {
+  padding-right: 10px; /* Add padding to avoid the scrollbar overlap */
+}
+
+.custom-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+  background-color: #007bff;
+  border-radius: 10px;
+}
+
+.custom-scroll::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+  border-radius: 10px;
+}
+
+/* Ensures no extra scrollbar appears */
+.custom-height {
+  min-height: 450px; /* Adjust this as needed */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden; /* Prevents double scrollbars */
+}

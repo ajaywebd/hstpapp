@@ -1,0 +1,158 @@
+/* Main container */
+.exercise-container {
+  background-color: #ffffff;
+  color: #333333;
+  padding: 30px;
+  max-width: 900px;
+  margin: 20px auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  font-family: "Arial", sans-serif;
+}
+
+/* Title styling */
+.exercise-title {
+  color: #007bff;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+}
+
+/* Description styling */
+.exercise-description {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 25px;
+  text-align: justify;
+  color: #555555;
+}
+
+/* Section titles */
+.section-title {
+  color: #28a745;
+  font-weight: bold;
+  margin-top: 35px;
+  margin-bottom: 20px;
+  font-size: 1.6rem;
+  border-bottom: 2px solid #28a745;
+  padding-bottom: 10px;
+}
+
+/* Bullet points and lists */
+.list-group {
+  list-style-type: disc;
+  padding-left: 25px;
+  margin-bottom: 20px;
+}
+
+.list-group-item {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  background: transparent;
+  padding: 10px 0;
+  margin-bottom: 15px;
+  border: none;
+}
+
+/* Ensure strong tags in list items are bold */
+.list-group-item strong {
+  font-weight: bold;
+  color: #333333;
+}
+
+/* Steps section ordered list */
+ol {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+ol li {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 15px;
+  color: #444444;
+}
+
+/* Types, Steps, Modifications styling */
+.type-item,
+.step-item,
+.modification-item {
+  margin-bottom: 25px;
+}
+
+/* Subtitles within sections */
+.type-item h4,
+.step-item h4,
+.modification-item h4 {
+  font-weight: bold;
+  color: #007bff;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+/* Button Styling */
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  border-radius: 6px;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  font-weight: bold;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+p {
+  text-align: start;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .exercise-container {
+    padding: 20px;
+  }
+
+  .exercise-title {
+    font-size: 1.9rem;
+  }
+
+  .exercise-description {
+    font-size: 1rem;
+  }
+
+  .section-title {
+    font-size: 1.4rem;
+  }
+
+  .btn-primary {
+    font-size: 1.1rem;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .exercise-title {
+    font-size: 1.6rem;
+  }
+
+  .exercise-description {
+    font-size: 0.9rem;
+  }
+
+  .section-title {
+    font-size: 1.2rem;
+  }
+
+  .btn-primary {
+    font-size: 1rem;
+  }
+}
