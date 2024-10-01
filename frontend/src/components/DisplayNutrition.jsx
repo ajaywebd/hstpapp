@@ -24,6 +24,10 @@ const DisplayNutrition = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   // Find the unique data that matches selectedAge, selectedBMI, and selectedGender
   const selectedData = bmiData.find(
     (data) =>
