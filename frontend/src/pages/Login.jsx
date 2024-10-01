@@ -1,8 +1,10 @@
 import React, { useState } from "react";
-import { json, Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { handleError, handleSuccess } from "../utils";
+import "./Login.css"; // CSS file for additional styling
+import aiVideo from "../assets/videos/loginVideo.mp4";
 
 const Login = () => {
   const [loginInfo, setLoginInfo] = useState({
@@ -11,6 +13,7 @@ const Login = () => {
   });
 
   const navigate = useNavigate();
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setLoginInfo({
@@ -23,14 +26,14 @@ const Login = () => {
     e.preventDefault();
     const { email, password } = loginInfo;
     if (!email || !password) {
-      return handleError("Email, and password are required");
+      return handleError("Email and password are required");
     }
     try {
       const url = "https://hstpapp-api.vercel.app/auth/login";
       const response = await fetch(url, {
         method: "POST",
         headers: {
-          "Content-Type": "application/json", // Corrected key here
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(loginInfo),
       });
@@ -50,51 +53,51 @@ const Login = () => {
         handleError(message);
       }
     } catch (error) {
-      handleError(error.message || "Error during signup");
+      handleError(error.message || "Error during login");
     }
   };
 
   return (
-    <div className="container m-5">
-      <div className="row justify-content-center">
-        <div className="col-md-6">
-          <div className="card">
-            <div className="card-body">
-              <h3 className="text-center">Login</h3>
-              <form onSubmit={handleLogin}>
-                <div className="form-group mb-3">
-                  <label htmlFor="email">Email address</label>
-                  <input
-                    type="email"
-                    className="form-control"
-                    id="email"
-                    placeholder="Enter email"
-                    name="email"
-                    onChange={handleChange}
-                    value={loginInfo.email}
-                  />
-                </div>
-                <div className="form-group mb-3">
-                  <label htmlFor="password">Password</label>
-                  <input
-                    type="password"
-                    className="form-control"
-                    id="password"
-                    placeholder="Enter password"
-                    name="password"
-                    onChange={handleChange}
-                    value={loginInfo.password}
-                  />
-                </div>
-                <button type="submit" className="btn btn-primary btn-block">
-                  Login
-                </button>
-              </form>
-            </div>
+    <div className="login-container">
+      <video autoPlay muted loop className="background-video">
+        <source src={aiVideo} type="video/mp4" />
+      </video>
+      <div className="login-content">
+        <div className="card login-card">
+          <div className="card-body">
+            <h3 className="text-center tColor">Login</h3>
+            <form onSubmit={handleLogin}>
+              <div className="form-group mb-3">
+                <label htmlFor="email">Email address</label>
+                <input
+                  type="email"
+                  className="form-control"
+                  id="email"
+                  placeholder="Enter email"
+                  name="email"
+                  onChange={handleChange}
+                  value={loginInfo.email}
+                />
+              </div>
+              <div className="form-group mb-3">
+                <label htmlFor="password">Password</label>
+                <input
+                  type="password"
+                  className="form-control"
+                  id="password"
+                  placeholder="Enter password"
+                  name="password"
+                  onChange={handleChange}
+                  value={loginInfo.password}
+                />
+              </div>
+              <button type="submit" className="btn btn-primary btn-block">
+                Login
+              </button>
+            </form>
           </div>
         </div>
       </div>
-      {/* Toast Container must be inside the component */}
       <ToastContainer />
     </div>
   );
