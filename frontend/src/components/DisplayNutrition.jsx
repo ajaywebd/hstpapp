@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./DisplayNutrition.css"; // Assuming this file contains custom styles
 import { Link, useLocation } from "react-router-dom";
 import bmiData1 from "../data/BmiOne.jsx";
@@ -16,10 +16,13 @@ const DisplayNutrition = () => {
   const [data5, setData5] = useState(bmiData5);
   const [data6, setData6] = useState(bmiData6);
   const bmiData = [...data1, ...data2, ...data3, ...data4, ...data5, ...data6];
-  console.log(bmiData);
 
   const location = useLocation();
   const { selectedAge, selectedBMI, selectedGender } = location.state || {};
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   // Find the unique data that matches selectedAge, selectedBMI, and selectedGender
   const selectedData = bmiData.find(
