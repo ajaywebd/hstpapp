@@ -24,7 +24,7 @@
   max-width: 400px;
 }
 
-/* Updated: Transparent background with better contrast for text */
+/* Transparent background for the form */
 .login-card {
   background-color: rgba(255, 255, 255, 0.3); /* Increased transparency */
   padding: 2rem;
@@ -32,12 +32,35 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Slightly darker shadow for better text contrast */
   color: white; /* Ensures text is visible on transparent background */
 }
-label {
-  color: white;
-}
+
+label,
 .tColor {
   color: white;
 }
+
+/* Updated: Login button styling */
+.btn-primary {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.2
+  ); /* Transparent button background */
+  color: white;
+  border: 1px solid white;
+  font-weight: bold;
+  border-radius: 25px;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+  width: 100%;
+}
+
+.btn-primary:hover {
+  background-color: rgba(0, 150, 255, 0.8); /* Blue background on hover */
+  border-color: rgba(0, 150, 255, 1);
+  color: white;
+}
+
 /* Responsive styling */
 @media (max-width: 768px) {
   .login-container {
