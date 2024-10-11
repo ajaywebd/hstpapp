@@ -7,43 +7,43 @@ import {
   FaInstagram,
   FaDribbble,
 } from "react-icons/fa";
+import "./Footer.css"; // Import the custom CSS here
 
 const Footer = () => {
   return (
-    <footer
-      style={{ backgroundColor: "#1c2a39", color: "#fff", padding: "40px 0" }}>
+    <footer>
       <Container>
         <Row>
-          <Col xs={12} md={4} className="mb-4 text-center text-md-start">
-            <h5 className="mb-3">
+          <Col xs={12} md={4} className="mb-4 text-md-start">
+            <div className="mb-3">
               <img
                 src="https://cdn.pixabay.com/photo/2017/10/04/09/56/laboratory-2815641_1280.jpg"
                 alt="Medi Logo"
-                style={{ width: "40px" }}
+                className="footer-logo"
               />{" "}
-              HSTP
-            </h5>
-            <p>Automated AI based Theraputic Treatment Planning Tool.</p>
-            <div className="d-flex justify-content-center justify-content-md-start">
-              <a href="#" className="text-white me-3">
+              <h3 className="mt-4">HSTP</h3>
+            </div>
+            <p>Automated AI based Therapeutic Treatment Planning Tool.</p>
+            <div className="social-icons d-flex justify-content-md-start">
+              <a href="#" className="me-3">
                 <FaFacebookF />
               </a>
-              <a href="#" className="text-white me-3">
+              <a href="#" className="me-3">
                 <FaTwitter />
               </a>
-              <a href="#" className="text-white me-3">
+              <a href="#" className="me-3">
                 <FaDribbble />
               </a>
-              <a href="#" className="text-white">
+              <a href="#">
                 <FaInstagram />
               </a>
             </div>
           </Col>
-          <Col xs={12} md={4} className="mb-4 text-center text-md-start">
-            <h5 className="mb-3">Our Departments</h5>
+          <Col xs={12} md={4} className="mb-4 text-md-start">
+            <h5 style={{ color: "#f39c12" }}>Our Departments</h5>
             <Row>
               <Col xs={6}>
-                <ul className="list-unstyled">
+                <ul>
                   <li>Births</li>
                   <li>Cardiology</li>
                   <li>Traumatology</li>
@@ -53,7 +53,7 @@ const Footer = () => {
                 </ul>
               </Col>
               <Col xs={6}>
-                <ul className="list-unstyled">
+                <ul>
                   <li>Pulmonary</li>
                   <li>Neurology</li>
                   <li>Dental</li>
@@ -64,9 +64,9 @@ const Footer = () => {
               </Col>
             </Row>
           </Col>
-          <Col xs={12} md={4} className="mb-4 text-center text-md-start">
-            <h5 className="mb-3">We're Available</h5>
-            <ul className="list-unstyled">
+          <Col xs={12} md={4} className="mb-4 text-md-start">
+            <h5 style={{ color: "#f39c12" }}>We are Available</h5>
+            <ul>
               <li>Monday - Friday: 8.00 - 18.00</li>
               <li>Saturday: 8.00 - 18.00</li>
               <li>Sunday: 8.00 - 13.00</li>

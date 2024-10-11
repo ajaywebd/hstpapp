@@ -1,34 +1,41 @@
-/* testimonial.css */
+/* Testimonial Section */
 .testimonials {
-  background-color: #f8f9fa;
+  background-color: #f3f6f9;
+  padding: 60px 0;
 }
 
-.testimonials h2 {
-  font-size: 2rem;
+.section-title {
+  font-size: 2.5rem;
   font-weight: 700;
+  color: #1f4d6d;
 }
+
 .text-muted {
   text-align: center;
+  color: #6c757d;
 }
+
 .testimonial-item {
-  border-radius: 5px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.testimonial-item:hover {
+  transform: translateY(-10px);
 }
 
 .testimonial-content {
-  font-size: 1rem;
-  color: #555;
+  font-size: 1.1rem;
+  color: #333333;
 }
 
 .testimonial-author h5 {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 600;
-}
-
-.testimonial-author p {
-  font-size: 0.9rem;
-  color: #777;
+  color: #1f4d6d;
 }
 
 .slick-slide {
@@ -36,5 +43,51 @@
 }
 
 .slick-dots li button:before {
-  color: #007bff;
+  color: #1f4d6d;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #144258;
+  opacity: 0.75;
+}
+
+/* Ensure proper spacing and size on smaller screens */
+@media (max-width: 768px) {
+  .testimonials {
+    padding: 40px 15px; /* Reduce padding on mobile */
+  }
+
+  .testimonial-item {
+    padding: 20px;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .testimonial-content {
+    font-size: 1rem;
+  }
+
+  .testimonial-author h5 {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .testimonial-item {
+    padding: 15px;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .testimonial-content {
+    font-size: 0.9rem;
+  }
+
+  .testimonial-author h5 {
+    font-size: 1rem;
+  }
 }

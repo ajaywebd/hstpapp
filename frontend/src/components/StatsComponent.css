@@ -2,28 +2,33 @@
 .stats-container {
   background: linear-gradient(
     135deg,
-    #2c3e50,
-    #4ca1af
-  ); /* Professional gradient */
+    #1f4d6d,
+    #3b6978
+  ); /* Professional gradient to match theme */
   color: white;
   position: relative;
 }
 
 .overlay {
-  background: rgba(0, 0, 0, 0.6); /* Dark overlay for better text contrast */
+  background: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Slightly lighter dark overlay for better text contrast */
   padding: 3rem 0;
 }
 
 .stat-number {
   font-size: 2.8rem;
   font-weight: bold;
-  color: #e74c3c; /* Accent color for numbers (dark red) */
+  color: #0d6efd; /* Navy blue accent for numbers */
 }
 
 .stat-label {
   font-size: 1.2rem;
   margin-top: 0.5rem;
-  color: #ecf0f1; /* Light grey for the text */
+  color: #ecf0f1; /* Light grey for the text, consistent with previous design */
 }
 
 @media (max-width: 768px) {

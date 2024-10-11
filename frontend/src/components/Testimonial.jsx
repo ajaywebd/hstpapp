@@ -35,11 +35,11 @@ const Testimonial = () => {
   };
 
   return (
-    <section id="testimonials" className="testimonials py-5 bg-light">
+    <section id="testimonials" className="testimonials py-5">
       <div className="container">
         <div className="row justify-content-center mb-4">
           <div className="col-lg-8 text-center">
-            <h2>What Our Clients Say</h2>
+            <h2 className="section-title">What Our Clients Say</h2>
             <p className="text-muted">
               Hear from our satisfied customers who have enjoyed our services.
             </p>
@@ -47,46 +47,41 @@ const Testimonial = () => {
         </div>
 
         <Slider {...settings}>
-          <div className="testimonial-item p-4 bg-white">
+          <div className="testimonial-item p-4">
             <div className="testimonial-content">
               <p>
-                "This is the best service I have ever used. The team was
-                professional and the results were fantastic."
+                This is the best service I have ever used. The team was
+                professional and the results were fantastic.
               </p>
             </div>
             <div className="testimonial-author mt-4">
               <h5>Ajay Maurya</h5>
-              {/* <p className="text-muted">CEO, Company</p> */}
             </div>
           </div>
 
-          <div className="testimonial-item p-4 bg-white">
+          <div className="testimonial-item p-4">
             <div className="testimonial-content">
               <p>
-                "I was thoroughly impressed with the level of service and the
-                quality of the final product."
+                I was thoroughly impressed with the level of service and the
+                quality of the final product.
               </p>
             </div>
             <div className="testimonial-author mt-4">
               <h5>Abhishek Sharma</h5>
-              {/* <p className="text-muted">Marketing Director</p> */}
             </div>
           </div>
 
-          <div className="testimonial-item p-4 bg-white">
+          <div className="testimonial-item p-4">
             <div className="testimonial-content">
               <p>
-                "Highly recommend this company for anyone looking for top-notch
-                service and results."
+                Highly recommend this company for anyone looking for top-notch
+                service and results.
               </p>
             </div>
             <div className="testimonial-author mt-4">
               <h5>Ankit Jauhari</h5>
-              {/* <p className="text-muted">Entrepreneur</p> */}
             </div>
           </div>
-
-          {/* Add more testimonials as needed */}
         </Slider>
       </div>
     </section>

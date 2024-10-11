@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./StatsComponent.css"; // Custom CSS for styles
 
 const StatsComponent = () => {
@@ -6,6 +6,9 @@ const StatsComponent = () => {
   const [modernRooms, setModernRooms] = useState(1);
   const [healthTreatments, setHealthTreatments] = useState(1);
   const [surgeriesYear, setSurgeriesYear] = useState(1);
+
+  const statsRef = useRef(null); // Reference to the stats container
+  const [hasAnimated, setHasAnimated] = useState(false); // Track if animation has been done
 
   // Function to animate count up for a specific number
   const animateCount = (target, setter, duration) => {
@@ -23,16 +26,38 @@ const StatsComponent = () => {
     }, 20); // Set interval speed (20ms for smoother animation)
   };
 
-  // Animate all counts when component mounts
+  // Intersection Observer to trigger animation on scroll
   useEffect(() => {
-    animateCount(22, setMedicalExperts, 100); // animate to 22
-    animateCount(146, setModernRooms, 100); // animate to 146
-    animateCount(388, setHealthTreatments, 100); // animate to 388
-    animateCount(1280, setSurgeriesYear, 100); // animate to 1280
-  }, []);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        if (entry.isIntersecting && !hasAnimated) {
+          // Start counting only when the component is in view
+          animateCount(22, setMedicalExperts, 100); // animate to 22
+          animateCount(146, setModernRooms, 100); // animate to 146
+          animateCount(388, setHealthTreatments, 100); // animate to 388
+          animateCount(1280, setSurgeriesYear, 100); // animate to 1280
+          setHasAnimated(true); // Ensure the animation runs only once
+        }
+      },
+      {
+        threshold: 0.5, // Trigger when 50% of the component is visible
+      }
+    );
+
+    if (statsRef.current) {
+      observer.observe(statsRef.current); // Observe the stats container
+    }
+
+    return () => {
+      if (statsRef.current) {
+        observer.unobserve(statsRef.current); // Clean up the observer
+      }
+    };
+  }, [hasAnimated]);
 
   return (
-    <div className="stats-container text-center py-5">
+    <div ref={statsRef} className="stats-container text-center py-5">
       <div className="overlay">
         <div className="container">
           <div className="row">

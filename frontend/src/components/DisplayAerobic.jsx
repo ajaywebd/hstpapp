@@ -163,7 +163,7 @@ const DisplayExercise = () => {
         </section>
       )}
 
-      <Link to="/exercise/aerobicExercise" className="btn btn-primary mt-4">
+      <Link to="/exercise/aerobicExercise" className="btn btn-success mt-4">
         Back to All Exercises
       </Link>
     </div>

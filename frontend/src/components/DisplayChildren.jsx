@@ -46,7 +46,7 @@ const DisplayChildren = () => {
           </section>
         ))}
 
-      <Link to="/exercise/childrenExercise" className="btn btn-primary mt-4">
+      <Link to="/exercise/childrenExercise" className="btn btn-success mt-4">
         Back to All Exercises
       </Link>
     </div>

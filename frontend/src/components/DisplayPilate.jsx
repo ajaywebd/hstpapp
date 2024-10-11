@@ -114,7 +114,7 @@ const DisplayPilate = () => {
         </section>
       )}
 
-      <Link to="/exercise/pilateExercise" className="btn btn-primary mt-4">
+      <Link to="/exercise/pilateExercise" className="btn btn-success mt-4">
         Back to All Exercises
       </Link>
     </div>

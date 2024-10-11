@@ -1,6 +1,6 @@
 /* Style for the professional button look */
 .custom-button {
-  background-color: #007bff; /* Professional primary blue */
+  background-color: #1f4d6d !important; /* Professional dark teal */
   border: none;
   color: white;
   padding: 0.5rem 1.5rem;
@@ -10,14 +10,14 @@
 }
 
 .custom-button:hover {
-  background-color: #0056b3; /* Darker blue on hover */
+  background-color: #144258; /* Darker teal on hover */
   color: white;
-  box-shadow: 0px 4px 6px rgba(0, 123, 255, 0.4); /* Subtle shadow on hover */
+  box-shadow: 0px 4px 6px rgba(31, 77, 109, 0.4); /* Subtle shadow on hover */
 }
 
 .custom-button:focus {
   outline: none;
-  box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.7); /* Focus shadow */
+  box-shadow: 0px 0px 5px rgba(31, 77, 109, 0.7); /* Focus shadow */
 }
 
 /* Centering the button inside the card footer */
@@ -37,6 +37,26 @@
 
 .card-body {
   padding-bottom: 20px;
+}
+
+/* Headings and Links */
+.card-title {
+  color: #1f4d6d; /* Dark teal for headings */
+  font-weight: 700;
+}
+
+a {
+  color: #1f4d6d; /* Dark teal for link text */
+  text-decoration: none;
+}
+
+a:hover {
+  color: #144258; /* Darker teal on hover */
+}
+
+/* Text Color */
+.card-text {
+  color: #5a5a5a; /* Darker gray for text to ensure readability */
 }
 
 /* Responsive carousel and card layout */

@@ -2,8 +2,8 @@
 
 /* Slider Item Style */
 .text-center1 {
-  background-color: #004d4d; /* Dark teal background for professional look */
-  color: #ffffff; /* White text */
+  background-color: #2c3e50; /* Dark blue-grey for professional, modern look */
+  color: #ecf0f1; /* Light grey text for better readability */
   border-radius: 10px;
   padding: 20px;
   margin: 10px;
@@ -12,24 +12,25 @@
   justify-content: center;
   align-items: center;
   min-height: 200px; /* Ensure consistent height */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Slightly more pronounced shadow for depth */
 }
 
 /* Icon Colors */
 .text-center i {
-  color: inherit; /* Icons inherit the section color */
+  color: #f39c12; /* Professional accent color for icons (Golden yellow) */
 }
 
 .text-center p {
   font-size: 1.2rem;
   margin-top: 10px;
   margin-bottom: 0;
+  color: #ecf0f1; /* Consistent light grey for text to improve readability */
 }
 
 /* Slick slider arrow colors */
 .slick-prev:before,
 .slick-next:before {
-  color: #004d4d; /* Change arrow color to match teal theme */
+  color: #2c3e50; /* Match arrow color with background theme */
 }
 
 /* Slick Slide Flexbox Alignment */
@@ -42,10 +43,10 @@
 
 /* Dots customization */
 .slick-dots li button:before {
-  color: #004d4d; /* Change dots color to match teal theme */
+  color: #472d02; /* Match dots color with icon accent (Golden yellow) */
 }
 
 .slick-dots li.slick-active button:before {
-  opacity: 0.75;
-  color: #004d4d; /* Change active dot color */
+  opacity: 0.85;
+  color: #f39c12; /* Highlight active dot for better visibility */
 }

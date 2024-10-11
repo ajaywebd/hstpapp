@@ -23,7 +23,16 @@
 }
 
 .icon-color {
-  color: #28a745; /* Updated to a professional green color */
+  color: #1f4d6d; /* Professional dark teal color */
+}
+
+h5 {
+  color: #2c3e50; /* Dark gray heading color */
+  font-weight: 700;
+}
+
+p {
+  color: #5a5a5a; /* Darker muted text color for readability */
 }
 
 /* Ensure the cards take full width on smaller screens */

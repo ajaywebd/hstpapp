@@ -45,7 +45,7 @@ const YogaDisplay = () => {
           </section>
         ))}
 
-      <Link to="/exercise/yogaExercise" className="btn btn-primary mt-4">
+      <Link to="/exercise/yogaExercise" className="btn btn-success mt-4">
         Back to All Exercises
       </Link>
     </div>

@@ -88,7 +88,7 @@ const Contact = () => {
                 <div className="email mb-4">
                   <i className="bi bi-envelope"></i>
                   <h4>Email Us:</h4>
-                  <p>customersupport@brbiomedical.co</p>
+                  <p>customersupport@brbiomedical.com</p>
                 </div>
               </div>
             </div>
