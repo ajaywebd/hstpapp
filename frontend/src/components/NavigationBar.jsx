@@ -5,7 +5,6 @@ import { Link, useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./NavigationBar.css"; // Import the custom CSS file
 import { ToastContainer } from "react-toastify";
-import { handleSuccess } from "../utils";
 
 const NavigationBar = ({ handleLogout }) => {
   const [expanded, setExpanded] = useState(false);
