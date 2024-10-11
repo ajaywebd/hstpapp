@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./CalculateBMI.css";
 import { Button, Tab, Tabs, Form } from "react-bootstrap";
 
@@ -86,7 +87,7 @@ const CalculateBMI = () => {
                 />
               </Form.Group>
 
-              <Button type="submit" className="calculate-btn w-100 mb-3">
+              <Button type="submit" className="calculate-btn w-100 mb-3 ">
                 Compute BMI
               </Button>
             </Form>
@@ -147,7 +148,7 @@ const CalculateBMI = () => {
           <h5>What Next? Take Action Towards Better Health:</h5>
           <ul>
             <li>
-              <a href="#">Maintain a Healthy Weight</a>
+              <Link to="/nutrition">Maintain a Healthy Weight</Link>
             </li>
             <li>
               Maintaining a healthy weight is important for your heart health.
@@ -160,7 +161,7 @@ const CalculateBMI = () => {
             </li>
             <li>Moving more can lower your risk factors for heart disease.</li>
             <li>
-              <a href="#">Eat a Heart-Healthy Diet</a>
+              <Link to="/nutrition">Eat a Heart-Healthy Diet</Link>
             </li>
           </ul>
         </div>

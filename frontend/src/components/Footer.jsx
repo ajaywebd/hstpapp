@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Container, Row, Col } from "react-bootstrap";
 import {
@@ -7,21 +7,42 @@ import {
   FaInstagram,
   FaDribbble,
 } from "react-icons/fa";
-import "./Footer.css"; // Import the custom CSS here
+import "./Footer.css"; // Import the custom CSS
 
 const Footer = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const hstpRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true); // Start animation when visible
+          }
+        });
+      },
+      { threshold: 0.5 } // Trigger when 50% of the component is visible
+    );
+
+    if (hstpRef.current) {
+      observer.observe(hstpRef.current);
+    }
+
+    return () => {
+      if (hstpRef.current) {
+        observer.unobserve(hstpRef.current);
+      }
+    };
+  }, []);
+
   return (
     <footer>
       <Container>
         <Row>
           <Col xs={12} md={4} className="mb-4 text-md-start">
-            <div className="mb-3">
-              <img
-                src="https://cdn.pixabay.com/photo/2017/10/04/09/56/laboratory-2815641_1280.jpg"
-                alt="Medi Logo"
-                className="footer-logo"
-              />{" "}
-              <h3 className="mt-4">HSTP</h3>
+            <div ref={hstpRef}>
+              <h3 className={isVisible ? "hstp-animated" : ""}>HSTP</h3>
             </div>
             <p>Automated AI based Therapeutic Treatment Planning Tool.</p>
             <div className="social-icons d-flex justify-content-md-start">

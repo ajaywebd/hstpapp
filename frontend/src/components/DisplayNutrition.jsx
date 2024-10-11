@@ -102,7 +102,7 @@ const DisplayNutrition = () => {
           <p>No data available for this selection.</p>
         )}
         <div className="text-center">
-          <Link to="/nutrition" className="btn btn-primary mt-4">
+          <Link to="/nutrition" className="btn btn-success mt-4">
             Back to Nutrition
           </Link>
         </div>
