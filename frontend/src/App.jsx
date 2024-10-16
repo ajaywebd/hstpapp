@@ -42,6 +42,37 @@ function App() {
     setIsAuthenticated(false); // Update state
   };
 
+  // ========== PREVENTION COPY ==========
+  useEffect(() => {
+    // Disable right-click
+    document.addEventListener("contextmenu", (e) => {
+      e.preventDefault();
+    });
+
+    // Disable text selection
+    document.addEventListener("selectstart", (e) => {
+      e.preventDefault();
+    });
+
+    // Disable copy functionality
+    document.addEventListener("copy", (e) => {
+      e.preventDefault();
+    });
+
+    return () => {
+      // Clean up event listeners
+      document.removeEventListener("contextmenu", (e) => {
+        e.preventDefault();
+      });
+      document.removeEventListener("selectstart", (e) => {
+        e.preventDefault();
+      });
+      document.removeEventListener("copy", (e) => {
+        e.preventDefault();
+      });
+    };
+  }, []);
+
   return (
     <Router>
       <RefresHandler setIsAuthenticated={setIsAuthenticated} />
