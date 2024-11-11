@@ -15,11 +15,15 @@ const CalculateBMI = () => {
     e.preventDefault();
     let calculatedBMI;
     if (unit === "US") {
+      // For US units: feet and inches for height, kg for weight
       const heightInInches = parseInt(feet) * 12 + parseInt(inches);
-      calculatedBMI = Math.round((weight / heightInInches ** 2) * 703);
+      const weightInKg = weight;
+      calculatedBMI = Math.round((weightInKg / heightInInches ** 2) * 703);
     } else {
+      // For Metric units: cm for height, lbs for weight
       const heightInMeters = parseInt(feet) / 100;
-      calculatedBMI = Math.round(weight / heightInMeters ** 2);
+      const weightInLbs = weight * 2.205; // Convert kg to pounds for metric
+      calculatedBMI = Math.round(weightInLbs / heightInMeters ** 2);
     }
 
     setBmi(calculatedBMI);
@@ -78,12 +82,12 @@ const CalculateBMI = () => {
               </Form.Group>
 
               <Form.Group controlId="formWeight" className="mb-4">
-                <Form.Label>Your Weight (pounds)</Form.Label>
+                <Form.Label>Your Weight (kg)</Form.Label>
                 <Form.Control
                   type="number"
                   value={weight}
                   onChange={(e) => setWeight(e.target.value)}
-                  placeholder="lbs"
+                  placeholder="kg"
                 />
               </Form.Group>
 
@@ -106,12 +110,12 @@ const CalculateBMI = () => {
               </Form.Group>
 
               <Form.Group controlId="formWeightMetric" className="mb-4">
-                <Form.Label>Your Weight (kg)</Form.Label>
+                <Form.Label>Your Weight (lbs)</Form.Label>
                 <Form.Control
                   type="number"
                   value={weight}
                   onChange={(e) => setWeight(e.target.value)}
-                  placeholder="kg"
+                  placeholder="lbs"
                 />
               </Form.Group>
 

@@ -37,7 +37,7 @@ const NewsSection = () => {
                         {item.title}
                       </Card.Title>
                       <Card.Text className="text-start">
-                        <p className="text-start">{item.description}</p>
+                        {item.description}
                       </Card.Text>
                     </Card.Body>
                     <Card.Footer className="mt-auto d-flex justify-content-between align-items-center">
