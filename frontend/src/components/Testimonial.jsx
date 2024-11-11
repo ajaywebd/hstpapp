@@ -50,8 +50,8 @@ const Testimonial = () => {
           <div className="testimonial-item p-4">
             <div className="testimonial-content">
               <p>
-                This is the best service I have ever used. The team was
-                professional and the results were fantastic.
+                This is the best service I have ever used. The team 
+               and the results were fantastic.
               </p>
             </div>
             <div className="testimonial-author mt-4">
