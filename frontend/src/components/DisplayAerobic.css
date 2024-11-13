@@ -1,21 +1,24 @@
 /* Main container */
 .exercise-container {
-  background-color: #fff; /* White background */
-  color: #333; /* Darker text color for readability */
+  background-color: #fefefe; /* Light gray background for a professional look */
+  color: #2c3e50; /* Dark gray text for readability */
   padding: 30px;
   max-width: 900px;
   margin: 20px auto;
   border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  font-family: "Arial", sans-serif; /* Clean and modern font */
 }
 
 /* Title styling */
 .exercise-title {
-  color: #007bff; /* Subtle blue for title */
+  color: #2c3e50; /* Dark gray for title */
   text-align: center;
   margin-bottom: 20px;
   font-weight: bold;
   font-size: 2rem;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 10px;
 }
 
 /* Description styling */
@@ -24,20 +27,23 @@
   line-height: 1.7;
   margin-bottom: 20px;
   text-align: justify;
+  color: #495057;
 }
 
 /* Section titles */
 .section-title {
-  color: #28a745; /* Green for section titles */
+  color: #007bff; /* Professional blue for section titles */
   font-weight: bold;
   margin-top: 30px;
   margin-bottom: 15px;
   font-size: 1.5rem;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 5px;
 }
 
-/* Benefits section */
+/* Benefits, Tips, and Safety Tips sections */
 .list-group {
-  list-style-type: disc; /* Simple bullets */
+  list-style-type: disc;
   padding-left: 20px;
   margin-bottom: 20px;
 }
@@ -45,9 +51,10 @@
 .list-group-item {
   font-size: 1rem;
   line-height: 1.6;
-  background: transparent; /* Remove background */
+  background: transparent; /* No background */
   padding: 5px 0;
-  margin-bottom: 10px; /* Spacing between each point */
+  margin-bottom: 10px;
+  color: #555;
   border: none; /* No borders */
 }
 
@@ -57,6 +64,7 @@
 .modification-item {
   margin-bottom: 20px;
 }
+
 .type-item p,
 .step-item p,
 .modification-item p {
@@ -68,7 +76,7 @@
 .step-item h4,
 .modification-item h4 {
   font-weight: bold;
-  color: #333; /* Darker color instead of bright blue */
+  color: #333;
   font-size: 1.2rem;
   margin-bottom: 5px;
 }
@@ -79,56 +87,39 @@
   border: none;
   padding: 10px 20px;
   font-size: 1.1rem;
+  font-weight: bold;
+  color: #ffffff;
   cursor: pointer;
+  text-decoration: none;
+  border-radius: 5px;
   transition: background-color 0.3s ease;
 }
 
 .btn-primary:hover {
   background-color: #0056b3;
 }
+
+/* Back Button Styling */
+.btn-success {
+  background-color: #28a745;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  margin-top: 20px;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+}
+
 /* Ensure strong tags in list items are bold */
 .list-group-item strong {
   font-weight: bold;
-}
-
-/* Styling for list items */
-.list-group-item {
-  font-size: 1rem;
-  line-height: 1.6;
-  background: transparent; /* No background */
-  padding: 5px 0;
-  margin-bottom: 10px; /* Space between items */
-  border: none; /* No border */
-}
-
-/* Section titles, like "Tips:" */
-.section-title {
-  color: #28a745; /* Green for titles */
-  font-weight: bold;
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-}
-/* Ensure strong tags in list items are bold */
-.list-group-item strong {
-  font-weight: bold;
-}
-
-/* Styling for list items */
-.list-group-item {
-  font-size: 1rem;
-  line-height: 1.6;
-  background: transparent; /* No background */
-  padding: 5px 0;
-  margin-bottom: 10px; /* Space between items */
-  border: none; /* No border */
-}
-
-/* Section titles */
-.section-title {
-  color: #28a745; /* Green for titles */
-  font-weight: bold;
-  font-size: 1.5rem;
-  margin-bottom: 15px;
 }
 
 /* Responsive adjustments */

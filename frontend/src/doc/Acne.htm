@@ -4,130 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Acne</title>
-    <link rel="stylesheet" href="./styles/acne.css" />
-    <style>
-      /* Reset some default browser styles */
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      /* Responsive typography */
-      html {
-        font-size: 100%; /* Default to 16px */
-      }
-      @media (max-width: 768px) {
-        html {
-          font-size: 90%;
-        }
-      }
-      @media (max-width: 480px) {
-        html {
-          font-size: 85%;
-        }
-      }
-
-      body {
-        font-family: "Calibri", sans-serif;
-        line-height: 1.6;
-        margin: 0;
-        padding: 0;
-        background-color: #f4f4f4;
-        color: #333;
-      }
-
-      .container {
-        width: 80%;
-        max-width: 1200px;
-        margin: 20px auto;
-        background-color: #fff;
-        padding: 20px;
-        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-        border-radius: 10px;
-      }
-
-      h1 {
-        font-size: 2.5em;
-        color: #2c3e50;
-        text-align: center;
-        margin-bottom: 20px;
-      }
-
-      h2 {
-        font-size: 2em;
-        color: #34495e;
-        margin-bottom: 15px;
-      }
-
-      p {
-        font-size: 1.1em;
-        margin-bottom: 15px;
-        text-align: justify;
-      }
-
-      ul {
-        margin: 10px 0 10px 20px;
-      }
-
-      ul li {
-        margin-bottom: 10px;
-        line-height: 1.5;
-      }
-
-      /* Responsive design */
-      @media (max-width: 1024px) {
-        .container {
-          width: 90%;
-        }
-        h1 {
-          font-size: 2.2em;
-        }
-        h2 {
-          font-size: 1.8em;
-        }
-      }
-
-      @media (max-width: 768px) {
-        .container {
-          width: 95%;
-        }
-        h1 {
-          font-size: 2em;
-        }
-        h2 {
-          font-size: 1.6em;
-        }
-      }
-
-      @media (max-width: 480px) {
-        .container {
-          width: 100%;
-          padding: 15px;
-        }
-        h1 {
-          font-size: 1.8em;
-        }
-        h2 {
-          font-size: 1.5em;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="styles/acne.css" />
+    <script src="./Prevent.js" defer></script>
   </head>
   <body>
     <div class="container">
       <h1 class="page-title">Acne</h1>
-      <p class="main-text">
-        Acne is the term for plugged pores, pimples, and deeper lumps that occur
-        on the face, neck, chest, back, shoulders, and even the upper arms.
-      </p>
-      <p class="main-text">
-        Acne is very common: nearly 17 million people in the US are affected by
-        this condition. Acne most often begins in puberty. During puberty, the
-        male sex hormones increase in both boys and girls, causing the sebaceous
-        glands to become more active. This, in turn, causes the sebaceous glands
-        to produce more sebum, or oil.
-      </p>
+      <div class="imgdiv">
+        <p class="main-text left-img">
+          Acne is the term for plugged pores, pimples, and deeper lumps that
+          occur on the face, neck, chest, back, shoulders, and even the upper
+          arms. Acne is very common: nearly 17 million people in the US are
+          affected by this condition. Acne most often begins in puberty. During
+          puberty, the male sex hormones increase in both boys and girls,
+          causing the sebaceous glands to become more active. This, in turn,
+          causes the sebaceous glands to produce more sebum, or oil.
+        </p>
+        <div class="float-image">
+          <img src="../assets/padiatric/child acne.png" alt="Acne Image" />
+        </div>
+      </div>
 
       <h2 class="sub-title">How does acne develop?</h2>
       <p class="main-text">
@@ -192,8 +88,8 @@
         <li>Neck</li>
       </ul>
       <p class="main-text">
-        The following are the most common signs/symptoms of acne. However, each
-        child may experience symptoms differently. Symptoms may include:
+        The following are the most common symptoms of acne. However, each child
+        may experience symptoms differently. Symptoms may include:
       </p>
       <ul class="list">
         <li>Blackheads</li>

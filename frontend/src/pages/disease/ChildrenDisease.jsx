@@ -135,7 +135,7 @@ const ChildrenDisease = () => {
 
   return (
     <div className="container my-5">
-      <h1 className="text-primary text-center mb-3">General Health</h1>
+      <h1 className="text-primary text-center mb-3">Children's Health</h1>
       <p className="text-center text-muted mb-4">
         Keeping kids healthy is a big job! Read up on common conditions and
         illnesses, body basics, caring for children, and much more.
