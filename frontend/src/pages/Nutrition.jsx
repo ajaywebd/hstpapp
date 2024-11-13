@@ -77,7 +77,7 @@ const Nutrition = () => {
               </p>
             </div>
           </div>
-          <div className="row justify-content-center">
+          <div className="row justify-content-between">
             {/* Left side: Data collection form */}
             <div className="col-lg-5 col-md-6 col-12 mb-4">
               <div className="row mb-3">
@@ -158,9 +158,24 @@ const Nutrition = () => {
                 </div>
               </div>
             </div>
+
+            {/* Right side: Display selected data */}
+            <div className="col-lg-5 col-md-6 col-12 d-flex flex-column justify-content-center align-items-start mb-4">
+              <h3>Selected Data</h3>
+              <p className="mb-1">
+                {selectedAge
+                  ? `Selected range of Age: ${selectedAge - 3}-${selectedAge}`
+                  : "Selected range of Age:"}
+              </p>
+
+              <p className="mb-1">
+                {selectedBMI
+                  ? `Selected range of BMI: ${selectedBMI - 2}-${selectedBMI}`
+                  : "Selected range of BMI:"}
+              </p>
+              <p className="mb-1">Selected Gender: {selectedGender}</p>
+            </div>
           </div>
-
-
           {/* Button centered below */}
           <div className="row justify-content-center mt-5">
             <div className="col-lg-4 col-md-6 col-8 text-center">

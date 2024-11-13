@@ -7,7 +7,7 @@ const cors = require("cors");
 const app = express();
 const PORT = process.env.PORT || 8080;
 app.get("/", (req, res) => {
-  res.send("hello kaka");
+  res.send("hello HSTP");
 });
 app.use(bodyParser.json());
 // Enabling CORS to allow requests from different domains (useful for frontend-backend communication)
