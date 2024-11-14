@@ -28,7 +28,7 @@ body {
   color: #333;
 }
 
-.container {
+.acne-container {
   width: 85%;
   max-width: 900px;
   margin: 40px auto;
@@ -38,7 +38,7 @@ body {
   border-radius: 8px;
 }
 
-.page-title {
+.acne-page-title {
   color: #2c3e50;
   font-size: 2.5rem;
   margin-bottom: 20px;
@@ -48,42 +48,35 @@ body {
   padding-bottom: 10px;
 }
 
-.sub-title,
-.section-title {
+.acne-sub-title,
+.acne-section-title {
   font-size: 1.8rem;
-  color: #28a745; /* Green color similar to the example image */
+  color: #28a745;
   margin-bottom: 15px;
   font-weight: 600;
-  border-bottom: 2px solid #28a745; /* Green border for section titles */
+  border-bottom: 2px solid #28a745;
   padding-bottom: 5px;
 }
 
-.main-text {
+.acne-main-text {
   font-size: 1.1rem;
   margin-bottom: 20px;
   text-align: justify;
   color: #444;
 }
 
-/* List styling */
-.list {
+.acne-list {
   margin: 10px 0;
   padding-left: 1.5em;
   color: #555;
 }
 
-.list li {
+.acne-list li {
   margin-bottom: 10px;
   line-height: 1.5;
 }
 
-/* Content styling */
-.content {
-  position: relative;
-}
-
-/* Float image styling */
-.float-image {
+.acne-float-image {
   float: right;
   width: 280px;
   max-width: 100%;
@@ -95,36 +88,34 @@ body {
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.float-image img {
+.acne-float-image img {
   max-width: 100%;
   height: auto;
   border-radius: 8px;
 }
 
-/* Individual remedy item styling */
-.remedy-item {
+.acne-remedy-item {
   background: #f8f9fa;
   padding: 15px;
   border-radius: 8px;
   margin-bottom: 20px;
-  border-left: 4px solid #28a745; /* Green border on the left for emphasis */
+  border-left: 4px solid #28a745;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
 }
 
-.remedy-item h3 {
+.acne-remedy-item h3 {
   color: #333;
   font-weight: 600;
   font-size: 1.3rem;
 }
 
-.remedy-item p {
+.acne-remedy-item p {
   margin: 5px 0;
   font-size: 1rem;
   color: #444;
 }
 
-/* Button styling */
-.btn-success {
+.acne-btn-success {
   background-color: #28a745;
   border: none;
   padding: 10px 20px;
@@ -139,43 +130,42 @@ body {
   text-align: center;
 }
 
-.btn-success:hover {
+.acne-btn-success:hover {
   background-color: #218838;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
-  .container {
+  .acne-container {
     width: 90%;
   }
 
-  .float-image {
+  .acne-float-image {
     float: none;
     margin: 0 auto 20px auto;
     width: 100%;
   }
 
-  .page-title {
+  .acne-page-title {
     font-size: 2rem;
   }
 
-  .sub-title,
-  .section-title {
+  .acne-sub-title,
+  .acne-section-title {
     font-size: 1.6rem;
   }
 }
 
 @media (max-width: 480px) {
-  .container {
+  .acne-container {
     width: 95%;
     padding: 20px;
   }
 
-  .page-title {
+  .acne-page-title {
     font-size: 1.8rem;
   }
 
-  .main-text {
+  .acne-main-text {
     font-size: 1rem;
   }
 }

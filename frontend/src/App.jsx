@@ -26,6 +26,7 @@ import Signup from "./components/Signup";
 import Login from "./pages/Login";
 import RefresHandler from "./RefresHandler";
 import PrivateRoute from "./PrivateRoute";
+import DisplayHtmlContent from "./components/DisplayHtmlContent";
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -128,6 +129,16 @@ function App() {
           element={
             <PrivateRoute
               element={<ChildrenDisease />}
+              isAuthenticated={isAuthenticated}
+            />
+          }
+        />
+        {/* Dynamic route to display HTML content */}
+        <Route
+          path="/disease/:fileName"
+          element={
+            <PrivateRoute
+              element={<DisplayHtmlContent />}
               isAuthenticated={isAuthenticated}
             />
           }
