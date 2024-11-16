@@ -8,6 +8,10 @@ const DisplayHtmlContent = () => {
   const [htmlContent, setHtmlContent] = useState("");
 
   useEffect(() => {
+    // Scroll to the top when the component is rendered
+    window.scrollTo(0, 0);
+
+    // Fetch the HTML file content based on the URL parameter
     fetch(`/doc/${fileName}.htm`)
       .then((response) => response.text())
       .then((text) => setHtmlContent(text))

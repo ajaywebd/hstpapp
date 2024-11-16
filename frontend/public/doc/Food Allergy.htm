@@ -1,151 +1,29 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <title>Food Allergies</title>
-    <script src="./Prevent.js" defer></script>
-    <style>
-      /* Reset browser default styles */
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      /* Base font and layout settings */
-      body {
-        font-family: Arial, sans-serif;
-        line-height: 1.6;
-        color: #333;
-        background-color: #f4f4f4;
-        margin: 0;
-        padding: 0;
-      }
-
-      .WordSection1 {
-        width: 80%;
-        max-width: 1200px;
-        margin: 20px auto;
-        padding: 20px;
-        background-color: #fff;
-        border-radius: 10px;
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-      }
-
-      /* Headings styles */
-      h1,
-      h2,
-      h3,
-      b {
-        color: #2c3e50;
-        margin-bottom: 15px;
-      }
-
-      h1 {
-        font-size: 2.5em;
-        text-align: center;
-      }
-
-      h2 {
-        font-size: 2em;
-        margin-bottom: 10px;
-      }
-
-      h3 {
-        font-size: 1.75em;
-        margin-bottom: 10px;
-      }
-
-      /* Paragraph styles */
-      p {
-        margin-bottom: 15px;
-        font-size: 1.1em;
-        text-align: justify;
-      }
-
-      /* List styles */
-      ul {
-        margin: 10px 0 20px 20px;
-      }
-
-      ul li {
-        margin-bottom: 10px;
-        line-height: 1.5;
-      }
-
-      /* Responsive typography */
-      @media (max-width: 1024px) {
-        .WordSection1 {
-          width: 90%;
-        }
-
-        h1 {
-          font-size: 2.2em;
-        }
-
-        h2 {
-          font-size: 1.8em;
-        }
-
-        h3 {
-          font-size: 1.5em;
-        }
-      }
-
-      @media (max-width: 768px) {
-        .WordSection1 {
-          width: 95%;
-        }
-
-        h1 {
-          font-size: 2em;
-        }
-
-        h2 {
-          font-size: 1.6em;
-        }
-
-        h3 {
-          font-size: 1.3em;
-        }
-      }
-
-      @media (max-width: 480px) {
-        .WordSection1 {
-          width: 100%;
-          padding: 15px;
-        }
-
-        h1 {
-          font-size: 1.8em;
-        }
-
-        h2 {
-          font-size: 1.5em;
-        }
-
-        h3 {
-          font-size: 1.2em;
-        }
-      }
-    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/acne.css" />
   </head>
   <body>
-    <div class="WordSection1">
-      <h1>Food Allergies</h1>
+    <div class="acne-container">
+      <h1 class="acne-page-title">Food Allergies</h1>
 
-      <h2>What is a food allergy?</h2>
-      <p>
+      <!-- <h3 class="acne-sub-title">What is a Food Allergy?</h3> -->
+      <p class="acne-main-text">
         A food allergy occurs when the immune system mistakenly treats a certain
         food as dangerous. Antibodies to the allergen trigger the release of
-        chemicals like histamine, which can cause symptoms that affect various
-        parts of the body.
+        chemicals like histamine, causing symptoms that affect various parts of
+        the body.
       </p>
 
-      <h2>What's a reaction like?</h2>
-      <p>
+      <h3 class="acne-sub-title">What's a Reaction Like?</h3>
+      <p class="acne-main-text">
         For example, in a peanut allergy, antibodies react to peanuts, causing
         symptoms such as:
       </p>
-      <ul>
+      <ul class="acne-list">
         <li>Tightness in the throat</li>
         <li>Hoarse voice</li>
         <li>Wheezing</li>
@@ -153,67 +31,66 @@
         <li>Nausea, vomiting, or diarrhea</li>
         <li>Hives or tingling in the lips or tongue</li>
       </ul>
-      <p>
-        In severe cases, a food allergy can cause <strong>anaphylaxis</strong>,
-        a life-threatening condition where the body’s systems react all at once,
-        potentially causing blood pressure drops, airway constriction, and
+      <p class="acne-main-text">
+        In severe cases, a food allergy can cause anaphylaxis, a
+        life-threatening condition where multiple body systems react at once,
+        potentially leading to blood pressure drops, airway constriction, and
         swelling of the tongue.
       </p>
 
-      <h2>How do you know if you have one?</h2>
-      <p>
-        It can be difficult to determine, as food allergies may be hard to
-        identify when multiple ingredients are involved. Doctors may conduct
-        allergy tests or review family history, as food allergies can be
-        hereditary. They may also run diagnostic tests such as a skin test using
-        extracts of food allergens to see how the body reacts.
+      <h3 class="acne-sub-title">How Do You Know If You Have One?</h3>
+      <p class="acne-main-text">
+        Identifying a food allergy can be difficult, especially when multiple
+        ingredients are involved. Doctors may conduct allergy tests, review
+        family history, or perform diagnostic tests like skin testing with
+        extracts of food allergens to observe the body’s reaction.
       </p>
 
-      <h2>What will the doctor do?</h2>
-      <p>
-        If a doctor suspects a food allergy, you will be referred to an
-        allergist, who will ask about reactions and family history. The
-        allergist may conduct a skin or liquid extract test to confirm
-        allergies.
+      <h3 class="acne-sub-title">What Will the Doctor Do?</h3>
+      <p class="acne-main-text">
+        If a doctor suspects a food allergy, they may refer you to an allergist.
+        The allergist will ask about your reactions and family history, and may
+        perform skin or blood tests to confirm allergies.
       </p>
 
-      <h2>How do food allergies get diagnosed?</h2>
-      <p>
-        If you think you may have a food allergy, it's important to tell a
-        parent and get a doctor’s evaluation. The allergist will ask about your
-        reactions, family history, and symptoms. Diagnosis often involves a
-        <strong>skin test</strong> where the doctor will apply a small amount of
-        different food extracts to check for reactions like redness or swelling.
-        They may also perform a <strong>blood test</strong> to check for
-        specific antibodies.
+      <h3 class="acne-sub-title">How Are Food Allergies Diagnosed?</h3>
+      <p class="acne-main-text">
+        To diagnose a food allergy, the allergist may use:
       </p>
-
-      <h2>How are food allergies treated?</h2>
-      <p>
-        There is no cure for food allergies, but there are ways to manage them:
-      </p>
-      <ul>
+      <ul class="acne-list">
         <li>
-          <strong>Avoidance</strong>: The most effective way to handle a food
-          allergy is by avoiding the trigger food.
+          Skin Tests: Small amounts of food extracts are applied to the skin to
+          check for redness or swelling.
         </li>
         <li>
-          <strong>Emergency Plan</strong>: It’s important to have a plan in case
-          of accidental exposure. This plan often includes carrying
-          <strong>epinephrine</strong> (an adrenaline shot) for severe reactions
-          like anaphylaxis.
-        </li>
-        <li>
-          <strong>Antihistamines</strong>: These can help manage mild symptoms,
-          though they aren’t a substitute for epinephrine in severe cases.
+          Blood Tests: Measures specific antibodies to identify potential food
+          allergens.
         </li>
       </ul>
 
-      <h2>Living with food allergies</h2>
-      <p>
-        Living with food allergies means being cautious, but it doesn’t have to
-        slow you down. Many companies now make allergen-free substitutes for
-        favourite foods, making it easier to manage.
+      <h3 class="acne-sub-title">How Are Food Allergies Treated?</h3>
+      <p class="acne-main-text">
+        There is no cure for food allergies, but they can be managed through:
+      </p>
+      <ul class="acne-list">
+        <li>
+          <strong>Avoidance:</strong> Avoid trigger foods to prevent reactions.
+        </li>
+        <li>
+          <strong>Emergency Plan:</strong> Carry epinephrine (an adrenaline
+          shot) for severe reactions like anaphylaxis.
+        </li>
+        <li>
+          <strong>Antihistamines:</strong> Used for mild symptoms, but they
+          cannot replace epinephrine for severe cases.
+        </li>
+      </ul>
+
+      <h3 class="acne-sub-title">Living With Food Allergies</h3>
+      <p class="acne-main-text">
+        Living with food allergies requires caution but doesn’t have to limit
+        your lifestyle. Many companies now offer allergen-free substitutes for
+        favorite foods, making management easier.
       </p>
     </div>
   </body>
