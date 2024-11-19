@@ -32,17 +32,17 @@ function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [isPhone, setIsPhone] = useState(false);
 
-  // Check if the device is a phone
-  // useEffect(() => {
-  //   const checkIfPhone = () => {
-  //     const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-  //     const isPhoneDevice =
-  //       /android|iPhone|iPod/i.test(userAgent) && window.innerWidth < 768; // Adjust width if needed
-  //     setIsPhone(isPhoneDevice);
-  //   };
+  //Check if the device is a phone
+  useEffect(() => {
+    const checkIfPhone = () => {
+      const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+      const isPhoneDevice =
+        /android|iPhone|iPod/i.test(userAgent) && window.innerWidth < 768; // Adjust width if needed
+      setIsPhone(isPhoneDevice);
+    };
 
-  //   checkIfPhone();
-  // }, []);
+    checkIfPhone();
+  }, []);
 
   useEffect(() => {
     const token = localStorage.getItem("token");
@@ -66,9 +66,9 @@ function App() {
     };
   }, []);
 
-  // if (!isPhone) {
-  //   return <div>This app is only available on mobile phones.</div>;
-  // }
+  if (!isPhone) {
+    return <div>This app is only available on mobile phones.</div>;
+  }
 
   return (
     <Router>

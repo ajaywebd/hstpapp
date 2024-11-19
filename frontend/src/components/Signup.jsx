@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { json, Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { handleError, handleSuccess } from "../utils";
@@ -12,6 +12,7 @@ const Signup = () => {
   });
 
   const navigate = useNavigate();
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setSignupInfo({
@@ -31,7 +32,7 @@ const Signup = () => {
       const response = await fetch(url, {
         method: "POST",
         headers: {
-          "Content-Type": "application/json", // Corrected key here
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(signupInfo),
       });
@@ -43,8 +44,8 @@ const Signup = () => {
           navigate("/login");
         }, 1000);
       } else if (error) {
-        const details = error?.details[0].message;
-        handleError(details);
+        const details = error?.details[0]?.message;
+        handleError(details || "An error occurred");
       } else if (!success) {
         handleError(message);
       }
@@ -54,18 +55,30 @@ const Signup = () => {
   };
 
   return (
-    <div className="container m-5">
-      <div className="row justify-content-center">
-        <div className="col-md-6">
-          <div className="card">
-            <div className="card-body">
-              <h3 className="text-center">Sign Up</h3>
+    <div
+      className="container d-flex align-items-center justify-content-center"
+      style={{
+        minHeight: "100vh",
+        background: "linear-gradient(135deg, #3b82f6, #06b6d4)",
+      }}>
+      <div className="row justify-content-center w-100">
+        <div className="col-md-6 col-lg-4">
+          <div className="card shadow-lg border-0">
+            <div
+              className="card-body"
+              style={{
+                background: "#ffffff",
+                borderRadius: "10px",
+              }}>
+              <h3 className="text-center text-primary  mb-4">Sign Up</h3>
               <form onSubmit={handleSignup}>
                 <div className="form-group mb-3">
-                  <label htmlFor="name">Name</label>
+                  <label htmlFor="name" className="text-muted">
+                    Name
+                  </label>
                   <input
                     type="text"
-                    className="form-control"
+                    className="form-control shadow-sm"
                     id="name"
                     placeholder="Enter your name"
                     name="name"
@@ -74,30 +87,37 @@ const Signup = () => {
                   />
                 </div>
                 <div className="form-group mb-3">
-                  <label htmlFor="email">Email address</label>
+                  <label htmlFor="email" className="text-muted">
+                    Email Address
+                  </label>
                   <input
                     type="email"
-                    className="form-control"
+                    className="form-control shadow-sm"
                     id="email"
-                    placeholder="Enter email"
+                    placeholder="Enter your email"
                     name="email"
                     onChange={handleChange}
                     value={signupInfo.email}
                   />
                 </div>
                 <div className="form-group mb-3">
-                  <label htmlFor="password">Password</label>
+                  <label htmlFor="password" className="text-muted">
+                    Password
+                  </label>
                   <input
                     type="password"
-                    className="form-control"
+                    className="form-control shadow-sm"
                     id="password"
-                    placeholder="Enter password"
+                    placeholder="Enter your password"
                     name="password"
                     onChange={handleChange}
                     value={signupInfo.password}
                   />
                 </div>
-                <button type="submit" className="btn btn-primary btn-block">
+                <button
+                  type="submit"
+                  className="btn btn-success btn-block w-100 shadow"
+                  style={{ borderRadius: "30px" }}>
                   Sign Up
                 </button>
               </form>
@@ -105,9 +125,9 @@ const Signup = () => {
                 <p>
                   Already have an account?{" "}
                   <Link
-                    to={"/login"}
-                    className="text-primary"
-                    style={{ cursor: "pointer" }}>
+                    to="/login"
+                    className="text-primary fw-bold"
+                    style={{ textDecoration: "none" }}>
                     Log In
                   </Link>
                 </p>
@@ -116,7 +136,6 @@ const Signup = () => {
           </div>
         </div>
       </div>
-      {/* Toast Container must be inside the component */}
       <ToastContainer />
     </div>
   );
