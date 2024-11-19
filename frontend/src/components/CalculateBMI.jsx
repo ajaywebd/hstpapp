@@ -14,16 +14,17 @@ const CalculateBMI = () => {
   const calculateBMI = (e) => {
     e.preventDefault();
     let calculatedBMI;
+
     if (unit === "US") {
-      // For US units: feet and inches for height, kg for weight
+      // Height in inches, weight in kg (UK Standard)
       const heightInInches = parseInt(feet) * 12 + parseInt(inches);
-      const weightInKg = weight;
-      calculatedBMI = Math.round((weightInKg / heightInInches ** 2) * 703);
+      calculatedBMI = Math.round((weight / heightInInches ** 2) * 703);
     } else {
-      // For Metric units: cm for height, lbs for weight
+      // Height in cm, weight in lbs (US Standard)
       const heightInMeters = parseInt(feet) / 100;
-      const weightInLbs = weight * 2.205; // Convert kg to pounds for metric
-      calculatedBMI = Math.round(weightInLbs / heightInMeters ** 2);
+      const weightInLbs = parseFloat(weight);
+      const weightInKg = weightInLbs / 2.205; // Convert to kg for accuracy
+      calculatedBMI = Math.round(weightInKg / heightInMeters ** 2);
     }
 
     setBmi(calculatedBMI);
@@ -53,14 +54,13 @@ const CalculateBMI = () => {
 
   return (
     <div className="bmi-calculator">
-      {/* Left Side: Form */}
       <div className="bmi-form">
         <Tabs
           id="unit-tabs"
           activeKey={unit}
           onSelect={handleUnitChange}
           className="mb-4">
-          <Tab eventKey="US" title="Standard">
+          <Tab eventKey="US" title="UK Standard">
             <Form onSubmit={calculateBMI}>
               <Form.Group controlId="formHeightFeet" className="mb-3">
                 <Form.Label>Your Height:</Form.Label>
@@ -91,13 +91,13 @@ const CalculateBMI = () => {
                 />
               </Form.Group>
 
-              <Button type="submit" className="calculate-btn w-100 mb-3 ">
+              <Button type="submit" className="calculate-btn w-100 mb-3">
                 Compute BMI
               </Button>
             </Form>
           </Tab>
 
-          <Tab eventKey="Metric" title="Metric">
+          <Tab eventKey="Metric" title="US Standard">
             <Form onSubmit={calculateBMI}>
               <Form.Group controlId="formHeightMetric" className="mb-3">
                 <Form.Label>Your Height (cm)</Form.Label>
@@ -139,7 +139,6 @@ const CalculateBMI = () => {
         )}
       </div>
 
-      {/* Right Side: BMI Categories and Health Tips */}
       <div className="bmi-categories">
         <h5>BMI Categories:</h5>
         <ul>

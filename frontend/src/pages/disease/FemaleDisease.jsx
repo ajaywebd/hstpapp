@@ -72,7 +72,12 @@ const MaleDisease = () => {
   const filteredDiseases = sortedDiseases.filter((disease) =>
     disease.toLowerCase().includes(searchTerm.toLowerCase())
   );
-
+  const handleScrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // Adds a smooth scrolling effect
+    });
+  };
   return (
     <div className="container my-5">
       <h1 className="text-primary text-center mb-3">Women's Health</h1>
@@ -82,7 +87,7 @@ const MaleDisease = () => {
         maintaining overall well-being.
       </p>
       <div className="card p-4 shadow-sm custom-height">
-        <h3 className="text-primary mb-4">Common 100 disease in womens</h3>
+        <h3 className="text-primary mb-4">Common disease in womens</h3>
 
         {/* Search Input and Sorting Dropdown */}
         <div className="mb-4 d-flex justify-content-between align-items-center">
@@ -112,7 +117,9 @@ const MaleDisease = () => {
                   <Link
                     state={{ value: index + 1, name: "female" }}
                     to="/displayDisease"
-                    className="custom-link">
+                    className="custom-link"
+                    onClick={handleScrollToTop} // Scroll to top when clicked
+                  >
                     {disease}
                   </Link>
                 </li>

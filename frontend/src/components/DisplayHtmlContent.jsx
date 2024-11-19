@@ -25,7 +25,10 @@ const DisplayHtmlContent = () => {
         dangerouslySetInnerHTML={{ __html: htmlContent }}
       />
       <button
-        onClick={() => navigate("/disease/childrenDisease")}
+        onClick={() => {
+          window.scrollTo(0, 0); // Scroll to the top
+          navigate("/disease/childrenDisease"); // Navigate back
+        }}
         className="btn btn-secondary back-button">
         Go Back to Children Disease
       </button>

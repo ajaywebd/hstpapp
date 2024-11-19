@@ -72,7 +72,12 @@ const ChildrenExercise = () => {
   const filteredDiseases = sortedDiseases.filter((disease) =>
     disease.toLowerCase().includes(searchTerm.toLowerCase())
   );
-
+  const handleScrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // Adds a smooth scrolling effect
+    });
+  };
   return (
     <div className="container my-5">
       <h1 className="text-primary text-center mb-3">Children's Exercise</h1>
@@ -112,7 +117,9 @@ const ChildrenExercise = () => {
                   <Link
                     state={{ value: index + 1, name: "child" }}
                     to="/displayChildren"
-                    className="custom-link">
+                    className="custom-link"
+                    onClick={handleScrollToTop} // Scroll to top when clicked
+                  >
                     {disease}
                   </Link>
                 </li>

@@ -88,7 +88,12 @@ const ChildrenDisease = () => {
   const filteredDiseases = sortedDiseases.filter((disease) =>
     disease.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
-
+  const handleScrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // Adds a smooth scrolling effect
+    });
+  };
   return (
     <div className="container my-5">
       <h1 className="text-primary text-center mb-3">Children's Health</h1>
@@ -97,9 +102,7 @@ const ChildrenDisease = () => {
         illnesses.
       </p>
       <div className="card p-4 shadow-sm custom-height">
-        <h3 className="text-primary mb-4">
-          Abdominal pain, Acne & many more...
-        </h3>
+        <h3 className="text-primary mb-4">Common disease in childrens</h3>
 
         {/* Search Input and Sorting Dropdown */}
         <div className="mb-4 d-flex justify-content-between align-items-center">
@@ -127,7 +130,11 @@ const ChildrenDisease = () => {
               filteredDiseases.map((disease, index) => (
                 <li key={index} className="mb-2">
                   {/* Link to the DisplayHtmlContent component with the file name as a parameter */}
-                  <Link to={`/disease/${disease.file}`}>{disease.name}</Link>
+                  <Link
+                    onClick={handleScrollToTop}
+                    to={`/disease/${disease.file}`}>
+                    {disease.name}
+                  </Link>
                 </li>
               ))
             ) : (

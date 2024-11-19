@@ -73,6 +73,12 @@ const femaleDisease = () => {
     disease.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
+  const handleScrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // Adds a smooth scrolling effect
+    });
+  };
   return (
     <div className="container my-5">
       <h1 className="text-primary text-center mb-3">Men's Health</h1>
@@ -111,7 +117,9 @@ const femaleDisease = () => {
                   <Link
                     state={{ value: index + 1, name: "male" }}
                     to="/displayDisease"
-                    className="custom-link">
+                    className="custom-link"
+                    onClick={handleScrollToTop} // Scroll to top when clicked
+                  >
                     {disease}
                   </Link>
                 </li>
