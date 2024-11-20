@@ -106,7 +106,7 @@ const Footer = () => {
             <h5 className="text-warning">Contact Info</h5>
             <ul>
               <li>Toll Free No. 1800 212 4669</li>
-              <li>sales@brbiomedical.com</li>
+              <li>customersupport@brbiomedical.com</li>
               <li>D-71, Malviya Nagar, New Delhi-110017 (INDIA)</li>
             </ul>
           </Col>
