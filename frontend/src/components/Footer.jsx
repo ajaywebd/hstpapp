@@ -7,22 +7,36 @@ import {
   FaInstagram,
   FaDribbble,
 } from "react-icons/fa";
-import "./Footer.css"; // Import the custom CSS
+import { Link } from "react-router-dom";
+import "./Footer.css";
 
 const Footer = () => {
   const [isVisible, setIsVisible] = useState(false);
   const hstpRef = useRef(null);
+
+  const quickLinksLeft = [
+    { text: "Men Disease", path: "/disease/maleDisease" },
+    { text: "Women Disease", path: "/disease/femaleDisease" },
+    { text: "Children Disease", path: "/disease/childrenDisease" },
+    { text: "Aerobic Exercise", path: "/exercise/aerobicExercise" },
+  ];
+
+  const quickLinksRight = [
+    { text: "Pilate Exercise", path: "/exercise/pilateExercise" },
+    { text: "Children Exercise", path: "/exercise/childrenExercise" },
+    { text: "Yoga Asans", path: "/exercise/yogaExercise" },
+  ];
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setIsVisible(true); // Start animation when visible
+            setIsVisible(true);
           }
         });
       },
-      { threshold: 0.5 } // Trigger when 50% of the component is visible
+      { threshold: 0.5 }
     );
 
     if (hstpRef.current) {
@@ -39,13 +53,14 @@ const Footer = () => {
   return (
     <footer>
       <Container>
-        <Row>
-          <Col xs={12} md={4} className="mb-4 text-md-start">
+        <Row className="d-flex justify-content-between align-items-start">
+          {/* HSTP Section */}
+          <Col xs={12} md={3} className="mb-4">
             <div ref={hstpRef}>
-              <h3 className={isVisible ? "hstp-animated" : ""}>HSTP</h3>
+              <h5 className="text-warning">HSTP</h5>
             </div>
-            <p>Automated AI based Therapeutic Treatment Planning Tool.</p>
-            <div className="social-icons d-flex justify-content-md-start">
+            <p>Automated AI-based Therapeutic Treatment Planning Tool.</p>
+            <div className="social-icons d-flex">
               <a href="#" className="me-3">
                 <FaFacebookF />
               </a>
@@ -60,37 +75,49 @@ const Footer = () => {
               </a>
             </div>
           </Col>
-          <Col xs={12} md={4} className="mb-4 text-md-start">
-            <h5 style={{ color: "#f39c12" }}>Our Departments</h5>
+
+          {/* Quick Links Section */}
+          <Col xs={12} md={3} className="mb-4">
+            <h5 className="text-warning">Quick Links</h5>
             <Row>
               <Col xs={6}>
                 <ul>
-                  <li>Births</li>
-                  <li>Cardiology</li>
-                  <li>Traumatology</li>
-                  <li>Nuclear</li>
-                  <li>Pregnancy</li>
-                  <li>X-ray</li>
+                  {quickLinksLeft.map((link, index) => (
+                    <li key={index}>
+                      <Link to={link.path}>{link.text}</Link>
+                    </li>
+                  ))}
                 </ul>
               </Col>
               <Col xs={6}>
                 <ul>
-                  <li>Pulmonary</li>
-                  <li>Neurology</li>
-                  <li>Dental</li>
-                  <li>Magnetic</li>
-                  <li>For Disabled</li>
-                  <li>Prostheses</li>
+                  {quickLinksRight.map((link, index) => (
+                    <li key={index}>
+                      <Link to={link.path}>{link.text}</Link>
+                    </li>
+                  ))}
                 </ul>
               </Col>
             </Row>
           </Col>
-          <Col xs={12} md={4} className="mb-4 text-md-start">
-            <h5 style={{ color: "#f39c12" }}>We are Available</h5>
+
+          {/* Contact Info Section */}
+          <Col xs={12} md={3} className="mb-4">
+            <h5 className="text-warning">Contact Info</h5>
             <ul>
-              <li>Monday - Friday: 8.00 - 18.00</li>
-              <li>Saturday: 8.00 - 18.00</li>
-              <li>Sunday: 8.00 - 13.00</li>
+              <li>Toll Free No. 1800 212 4669</li>
+              <li>sales@brbiomedical.com</li>
+              <li>D-71, Malviya Nagar, New Delhi-110017 (INDIA)</li>
+            </ul>
+          </Col>
+
+          {/* Availability Section */}
+          <Col xs={12} md={3} className="mb-4">
+            <h5 className="text-warning">We are Available</h5>
+            <ul>
+              <li>Monday - Friday: 9.00 - 18.00</li>
+              <li>Saturday: 11.00 - 16.00</li>
+              <li>Sunday: Close</li>
             </ul>
           </Col>
         </Row>

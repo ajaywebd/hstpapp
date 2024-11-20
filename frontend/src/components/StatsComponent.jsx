@@ -75,7 +75,7 @@ const StatsComponent = () => {
             </div>
             <div className="col-6 col-md-3">
               <h2 className="stat-number">{surgeriesYear}</h2>
-              <div className="stat-label">Surgeries a Year</div>
+              <div className="stat-label">Useres</div>
             </div>
           </div>
         </div>

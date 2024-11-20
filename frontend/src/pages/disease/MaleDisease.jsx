@@ -87,7 +87,7 @@ const femaleDisease = () => {
         preventative care, and tips for leading a healthy lifestyle.
       </p>
       <div className="card p-4 shadow-sm custom-height">
-        <h3 className="text-primary mb-4">Common 50 disease in men</h3>
+        <h3 className="text-primary mb-4">Common disease in men</h3>
 
         {/* Search Input and Sorting Dropdown */}
         <div className="mb-4 d-flex justify-content-between align-items-center">

@@ -4,6 +4,7 @@ import "./CalculateBMI.css";
 import { Button, Tab, Tabs, Form } from "react-bootstrap";
 
 const CalculateBMI = () => {
+  const [age, setAge] = useState(""); // Add state for age
   const [feet, setFeet] = useState("");
   const [inches, setInches] = useState("");
   const [weight, setWeight] = useState("");
@@ -45,6 +46,7 @@ const CalculateBMI = () => {
 
   const handleUnitChange = (selectedTab) => {
     setUnit(selectedTab);
+    setAge(""); // Reset age on unit change
     setFeet("");
     setInches("");
     setWeight("");
@@ -60,8 +62,21 @@ const CalculateBMI = () => {
           activeKey={unit}
           onSelect={handleUnitChange}
           className="mb-4">
-          <Tab eventKey="US" title="UK Standard">
+          <Tab eventKey="US" title="US Units">
             <Form onSubmit={calculateBMI}>
+              {/* Age Input Field */}
+              <Form.Group controlId="formAge" className="mb-3">
+                <Form.Label>Age:</Form.Label>
+                <Form.Control
+                  type="number"
+                  value={age}
+                  onChange={(e) => setAge(e.target.value)}
+                  placeholder="Age (3-75)"
+                  min="3"
+                  max="75"
+                />
+              </Form.Group>
+
               <Form.Group controlId="formHeightFeet" className="mb-3">
                 <Form.Label>Your Height:</Form.Label>
                 <div className="d-flex">
@@ -82,12 +97,12 @@ const CalculateBMI = () => {
               </Form.Group>
 
               <Form.Group controlId="formWeight" className="mb-4">
-                <Form.Label>Your Weight (kg)</Form.Label>
+                <Form.Label>Your Weight (lbs)</Form.Label>
                 <Form.Control
                   type="number"
                   value={weight}
                   onChange={(e) => setWeight(e.target.value)}
-                  placeholder="kg"
+                  placeholder="lbs"
                 />
               </Form.Group>
 
@@ -97,8 +112,21 @@ const CalculateBMI = () => {
             </Form>
           </Tab>
 
-          <Tab eventKey="Metric" title="US Standard">
+          <Tab eventKey="Metric" title="Metric Units">
             <Form onSubmit={calculateBMI}>
+              {/* Age Input Field for Metric Units */}
+              <Form.Group controlId="formAgeMetric" className="mb-3">
+                <Form.Label>Age:</Form.Label>
+                <Form.Control
+                  type="number"
+                  value={age}
+                  onChange={(e) => setAge(e.target.value)}
+                  placeholder="Age (3-75)"
+                  min="3"
+                  max="75"
+                />
+              </Form.Group>
+
               <Form.Group controlId="formHeightMetric" className="mb-3">
                 <Form.Label>Your Height (cm)</Form.Label>
                 <Form.Control
@@ -110,12 +138,12 @@ const CalculateBMI = () => {
               </Form.Group>
 
               <Form.Group controlId="formWeightMetric" className="mb-4">
-                <Form.Label>Your Weight (lbs)</Form.Label>
+                <Form.Label>Your Weight (kg)</Form.Label>
                 <Form.Control
                   type="number"
                   value={weight}
                   onChange={(e) => setWeight(e.target.value)}
-                  placeholder="lbs"
+                  placeholder="kg"
                 />
               </Form.Group>
 
@@ -134,6 +162,9 @@ const CalculateBMI = () => {
             </p>
             <p>
               Category: <strong>{bmiCategory}</strong>
+            </p>
+            <p>
+              Age: <strong>{age} years</strong>
             </p>
           </div>
         )}

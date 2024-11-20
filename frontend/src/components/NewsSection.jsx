@@ -42,16 +42,6 @@ const NewsSection = () => {
                     </Card.Body>
                     <Card.Footer className="mt-auto d-flex justify-content-between align-items-center">
                       <small className="text-muted">{item.date}</small>
-                      <div className="d-flex justify-content-center w-100">
-                        <Button
-                          variant="primary"
-                          href={item.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="custom-button">
-                          Read More...
-                        </Button>
-                      </div>
                     </Card.Footer>
                   </Card>
                 </Col>

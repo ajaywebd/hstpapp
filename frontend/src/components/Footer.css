@@ -7,7 +7,7 @@ footer {
 
 footer h5 {
   margin-bottom: 20px;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 footer p {
@@ -24,63 +24,36 @@ footer .social-icons a:hover {
   color: #f39c12;
 }
 
-/* List styles */
+footer ul li a {
+  color: #ecf0f1;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer ul li a:hover {
+  color: #f39c12;
+}
+
 footer ul {
   list-style-type: none;
   padding: 0;
 }
 
 footer ul li {
-  color: #ecf0f1;
   margin-bottom: 10px;
 }
 
-/* Initial state for HSTP (before animation) */
-footer h3 {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #f39c12;
-  opacity: 0;
-  transform: translateY(50px); /* Start below the viewport */
-  transition: all 1.5s ease; /* Smooth transition for animation */
-}
-
-/* Animated state for HSTP (when visible) */
-.hstp-animated {
-  opacity: 1;
-  transform: translateY(0); /* Move to original position */
-}
-
-/* Responsive Styles */
 @media (max-width: 768px) {
-  footer p {
-    text-align: center;
-  }
-
-  footer .social-icons {
-    justify-content: center !important;
-  }
-
+  footer p,
   footer h5 {
     text-align: center;
   }
 
-  footer .text-md-start {
-    text-align: center !important;
-  }
-
-  footer h3 {
-    text-align: center;
-    font-size: 2rem;
-  }
-}
-
-@media (max-width: 576px) {
-  footer {
+  footer ul {
     text-align: center;
   }
 
-  footer h3 {
-    font-size: 1.8rem;
+  .social-icons {
+    justify-content: center !important;
   }
 }

@@ -9,7 +9,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  animation: rotate360 3s forwards; /* Rotate 360 degrees once and stop */
+  /* animation: rotate360 3s forwards; Rotate 360 degrees once and stop */
 }
 
 .txtStyle h1,
@@ -31,7 +31,7 @@
   text-shadow: -1px -1px 3px rgba(0, 0, 0, 0.7); /* Slight black shadow for depth */
   line-height: 1.4;
   -webkit-text-stroke: 1px #2c3e50; /* Dark gray stroke */
-  color: white; /* White text for better visibility */
+  color: rgb(255, 255, 255); /* White text for better visibility */
 }
 
 /* General Text Style */
