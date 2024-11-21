@@ -6,11 +6,16 @@ import { Link } from "react-router-dom";
 
 const NewsSection = () => {
   const [index, setIndex] = useState(0);
-
   const handleSelect = (selectedIndex) => {
     setIndex(selectedIndex);
   };
 
+  const handleScrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // Adds a smooth scrolling effect
+    });
+  };
   return (
     <div className="news-section">
       <Container className="my-5">
@@ -20,7 +25,10 @@ const NewsSection = () => {
             <h2 className="text-start">Skin Care Tips</h2>
           </Col>
           <Col xs={12} md={4} className="text-md-end text-center">
-            <Link to={"/allNews"} variant="outline-primary">
+            <Link
+              to={"/allNews"}
+              onClick={handleScrollToTop}
+              variant="outline-primary">
               View All News
             </Link>
           </Col>
