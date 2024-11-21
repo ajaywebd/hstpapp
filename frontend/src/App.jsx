@@ -27,6 +27,7 @@ import Login from "./pages/Login";
 import RefresHandler from "./RefresHandler";
 import PrivateRoute from "./PrivateRoute";
 import DisplayHtmlContent from "./components/DisplayHtmlContent";
+import AllNews from "./components/AllNews";
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -239,6 +240,15 @@ function App() {
           element={
             <PrivateRoute
               element={<CalculateBMI />}
+              isAuthenticated={isAuthenticated}
+            />
+          }
+        />
+        <Route
+          path="/allNews"
+          element={
+            <PrivateRoute
+              element={<AllNews />}
               isAuthenticated={isAuthenticated}
             />
           }

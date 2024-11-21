@@ -1,0 +1,96 @@
+/* Container Styling */
+.container {
+  padding: 20px;
+  background-color: #f4f4f9;
+  font-family: "Arial", sans-serif;
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Header Styling */
+.header {
+  color: #4caf50;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+/* Card Styling */
+.card {
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Card Hover Effect */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Title Styling */
+.title {
+  color: #333;
+  font-size: 1.8rem;
+  border-bottom: 3px solid #4caf50;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+/* Subheading Styling */
+.subheading {
+  color: #555;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+/* List Styling */
+.list {
+  margin: 10px 0;
+  padding-left: 25px;
+  list-style: circle;
+}
+
+/* List Item Styling */
+.list-item {
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 5px;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+  }
+
+  .header {
+    font-size: 2rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .subheading {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    font-size: 1.8rem;
+  }
+
+  .title {
+    font-size: 1.2rem;
+  }
+
+  .subheading {
+    font-size: 1rem;
+  }
+}

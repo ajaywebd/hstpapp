@@ -7,6 +7,7 @@ import Testimonial from "../components/Testimonial";
 import SliderComponent from "../components/SliderComponent";
 import CarouselSlider from "../components/CarouselSlider";
 import StatsComponent from "../components/StatsComponent";
+import AllNews from "../components/AllNews";
 
 const Home = () => {
   return (
