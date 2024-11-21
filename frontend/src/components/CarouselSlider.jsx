@@ -11,7 +11,7 @@ import img5 from "../assets/img5.png";
 const CarouselSlider = () => {
   return (
     <div className="txtContainer">
-      <Carousel interval={2000} className="carousel-container">
+      <Carousel interval={2000} controls={false} className="carousel-container">
         {/* Change interval to 2 seconds */}
         <Carousel.Item>
           <img
@@ -52,7 +52,7 @@ const CarouselSlider = () => {
       <div className="txtStyle">
         <h1>HSTP</h1>
         <p>
-          Automated AI based <br /> Theraputic Treatment Planning Tool.
+          Automated AI based <br /> Therapeutic Treatment Planning Tool.
         </p>
       </div>
     </div>
